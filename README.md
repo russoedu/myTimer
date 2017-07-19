@@ -15,15 +15,22 @@ First you need to edit or create configurations for each timers, like the ones l
   "name": "cigarette",
   "bgColor": "bgRed",
   "timeTable": [
-    0.5,
-    0.8,
-    1,
-    1.1,
-    1.25
+    "00:30:00",
+    "00:45:00",
+    "01:00:00",
+    "01:10:00",
+    "01:10:00",
+    "01:30:00"
   ]
 }
 ```
-You should set a title, a message, a name, a terminal bgColor and the time table. The last enter in the time table is repeated.
+You should set:
+
+- title: used in the desktop alert
+- message: message for the alert used in all versions
+- name: the name used to show how mutch you did that timer
+- bgColor: terminal background color
+- timeTable: list with the repeat timers and the last enter in the time table is repeated
 
 ## Mobile push
 To use the mobile push you need to install the app [Push Me](http://pushme.jagcesar.se) and get your key. In the app, click on the key to copy to the clipboard.
@@ -34,3 +41,11 @@ Then you need to copy or rename the `.env.example` file to `.env` and insert you
 ## Usage
 
 Just run `npm start` and the app will run, alerting you in the computer and on your phone.
+
+## Example
+### Desktop alert
+![Alert example](./README/alert.png)
+### Mobile push
+![Alert example](./README/mobile.png)
+### Terminal message
+![Alert example](./README/terminal.png)
