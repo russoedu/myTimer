@@ -1,0 +1,7 @@
+{
+  "title": "Drink timer",
+  "message": "🚰  Me dá um copo d'água!!!!",
+  "name": "copo",
+  "bgColor": "bgBlue",
+  "timeTable": [0.9]
+}

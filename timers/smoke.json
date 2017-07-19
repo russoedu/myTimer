@@ -1,0 +1,13 @@
+{
+  "title": "Smoke timer",
+  "message": "🚬  Você pode fumar um cigarrin!",
+  "name": "cigarro",
+  "bgColor": "bgRed",
+  "timeTable": [
+    0.5,
+    0.8,
+    1,
+    1.1,
+    1.25
+  ]
+}

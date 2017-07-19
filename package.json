@@ -1,0 +1,21 @@
+{
+  "name": "mytimer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.0.1",
+    "dotenv": "^4.0.0",
+    "elapsy": "^1.0.5",
+    "node-boxcar": "^0.1.2",
+    "node-notifier": "^5.1.2",
+    "qs": "^6.5.0",
+    "request": "^2.81.0"
+  }
+}
