@@ -24,7 +24,7 @@ Configure or edit the other timers located in the timers folder.
   "endTime": "23:30",
   "bgColor": "bgYellow",
   "quantity": 5,
-  "timeTable": [
+  "reminders": [
     "00:30:00",
     "00:45:00",
     "01:00:00"
@@ -39,7 +39,7 @@ You should set:
 - endTime: when you want your timer to give the last alert in the day
 - bgColor: terminal background color
 - quantity: the number of times you want this to be repeated
-- timeTable: list with the repeat timers in "hh:mm:ss" format. If you have less timers than the number you set in `quantity`, the rest of the alerts will be distributed until the `endTime`. The time must use "hh:mm:ss" format.
+- reminders: list with the repeat timers in "hh:mm:ss" format. If you have less timers than the number you set in `quantity`, the rest of the reminders will be distributed until the `endTime`. The time must use "hh:mm:ss" format.
 
 ## Mobile push
 To use the mobile push you need to install the app [Push Me](http://pushme.jagcesar.se) and get your key. In the app, click on the key to copy to the clipboard.
@@ -49,7 +49,11 @@ Then you need to copy or rename the `.env.example` file to `.env` and insert you
 
 ## Usage
 
-Just run `npm start` and the app will run, alerting you in the computer and on your phone.
+First, install all nee packages with `npm install`.
+
+Then, create your timers (timers folder).
+
+Finaly, run `npm start` and the app will run, alerting you in the computer and on your phone.
 
 ## Example
 ### Desktop alert
@@ -64,7 +68,8 @@ Just run `npm start` and the app will run, alerting you in the computer and on y
 ### Mandatory
 
 - Finish execution after all timers finish
-- Make sure `quantity` is smaller than the length of `timeTable`
+- Check if all needed config are filled or have default values
+- Make sure `quantity` is smaller than the length of `reminders`
 - Create tests
 - Look for performance issues
 

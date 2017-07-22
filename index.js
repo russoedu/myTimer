@@ -1,9 +1,14 @@
+const debug = require('debug')('index');
 const fs = require('fs');
 const path = require('path');
 const Status = require('./lib/Status');
 const Timer = require('./lib/Timer');
+const Time = require('./lib/Time');
 
+// Start the status and the start time
 Status.logTime();
+const time = new Time()
+debug(time.getStart());
 
 const timersFolder = './timers/';
 const globalTimerPath = path.join(timersFolder, 'default.json');
@@ -26,11 +31,7 @@ files.forEach(file => {
     if (err) {
       console.error(err);
     } else if (file !== 'default.json'){
-      const timerConfig = {};
-      // Merge the global timer config overwriting each data with the current
-      // timer config
-      Object.assign(timerConfig, globalTimer, JSON.parse(data));
-      const timer = new Timer(timerConfig);
+      const timer = new Timer(data, file);
       timer.start();
     }
   });
