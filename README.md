@@ -72,7 +72,7 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 - Check if all needed config are filled or have default values
 - ~~Make sure `quantity` is smaller than the length of `reminders`~~
 - Create tests
-- Look for performance issues
+- ~~Look for performance issues~~
 
 ### Nice to have
 
