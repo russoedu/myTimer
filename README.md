@@ -1,4 +1,4 @@
-# Smoke and the Water 🚬 🚰 ☕️
+![](./README/smoke-and-the-water.jpg)
 
 Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water.
 
