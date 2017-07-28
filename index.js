@@ -6,7 +6,6 @@ const Timer = require('./lib/Timer');
 const Time = require('./lib/Time');
 
 // Start the status and the start time
-Status.logTime();
 const time = new Time();
 debug(time.getStart());
 
@@ -24,7 +23,7 @@ files.forEach((file) => {
   // Read each file content
   fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) {
-      console.error(err);
+      Status.error(err);
     } else if (file !== 'default.json') {
       const timer = new Timer(data, file);
       timer.start();

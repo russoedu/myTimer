@@ -1,6 +1,6 @@
 {
   "name": "smoke-and-the-water",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water",
   "main": "index.js",
   "scripts": {
@@ -36,7 +36,7 @@
     "request": "^2.81.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
+    "babel-core": "^6.25.0",
     "debug": "^2.6.8",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",

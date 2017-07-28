@@ -4,5 +4,10 @@
   "name": "lie remembered",
   "endTime": "23:30:00",
   "bgColor": "bgYellow",
-  "quantity": 3
+  "quantity": 3,
+  "media": {
+    "terminal": true,
+    "computer": true,
+    "phone": true
+  },
 }
