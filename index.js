@@ -1,19 +1,15 @@
 const debug = require('debug')('index');
 const fs = require('fs');
 const path = require('path');
-const Status = require('./lib/Status');
-const Timer = require('./lib/Timer');
-const Time = require('./lib/Time');
+const Status = require('./lib/views/Status');
+const Timer = require('./lib/controllers/Timer');
+const Time = require('./lib/helpers/Time');
 
 // Start the status and the start time
 const time = new Time();
 debug(time.getStart());
 
 const timersFolder = './timers/';
-
-// Set a global var to stop execution after all timers finish execution
-// TODO fix this
-// global.runningTimer = files.length;
 
 const files = fs.readdirSync(timersFolder);
 
