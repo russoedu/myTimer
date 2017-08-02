@@ -73,6 +73,59 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 
 ## TODO
 
+### Working on…
+
+- New `reminders` options to make it easier to crate your time table:
+ - "in": "Time after the beginning"
+ - "after": "Time after the previous"
+ - "at": "On an exact time of the day"
+
+```
+"reminders": {
+  "Do something fun": {
+    "in": "00:00:00"
+  },
+  "Read news": {
+    "in": "00:30:00"
+  },
+  "Go brush your teeth and your hair!": {
+    "in": "01:00:00"
+  },
+  "Go to work": {
+    "after": "00:05:00"
+  },
+  "Check Trello": {
+    "after": "01:00:00"
+  },
+  "Work": {
+    "after": "00:15:00"
+  },
+  "Do something fun!!!": {
+    "after": "03:45:00"
+  },
+  "Prepare dinner": {
+    "at": "18:00:00"
+  }
+```
+
+- Possibility to disable alert on some days:
+- 
+```
+"enable": [
+  "weekdays",
+  "weekends",
+  "sun",
+  "mon",
+  "tue",
+  "wed",
+  "thu",
+  "fri",
+  "sat",
+  0, 1, 2, 3, 4, 5, 6, 7
+]
+```
+
+
 ### Mandatory
 
 - ~~Calculate the remaining alerts.~~
