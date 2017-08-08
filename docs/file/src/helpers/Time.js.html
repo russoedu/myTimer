@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/helpers/Time.js | Smoke and the Water</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Smoke and the Water"><meta property="twitter:description" content="simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/russoedu/smoke-and-the-water"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#controllers">controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/controllers/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helpers">helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/helpers/Format.js~Format.html">Format</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/helpers/Time.js~Time.html">Time</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#models">models</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/DefaultTimerModel.js~DefaultTimerModel.html">DefaultTimerModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/ReminderModel.js~RemindeModel.html">RemindeModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/TimerModel.js~TimerModel.html">TimerModel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#views">views</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Alert.js~Alert.html">Alert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Computer.js~Computer.html">Computer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Phone.js~Phone.html">Phone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Status.js~Status.html">Status</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Terminal.js~Terminal.html">Terminal</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/helpers/Time.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const debug = require(&apos;debug&apos;)(&apos;Time&apos;);
+const Status = require(&apos;../views/Status&apos;);
+const Format = require(&apos;../helpers/Format&apos;);
+
+let instance = null;
+
+function addLeadingZero(time) {
+  return time &lt; 10 ? `0${time}` : time;
+}
+/**
+ * Time manupulation class
+ * @class Time
+ * @module Time
+ */
+class Time {
+  /**
+   * Create the singleton instance and set the current time
+   * @constructor
+   * @return {Object} The singleton instance
+   */
+  constructor() {
+    if (!instance) {
+      instance = this;
+    }
+    this.startTime = new Date();
+
+    return instance;
+  }
+
+  /**
+   * Get the time set in the creation of the first object
+   * @method getStart
+   * @return {String} The start time formated as hh:mm:ss
+   */
+  getStart() {
+    const hours = this.startTime.getHours();
+    const minutes = this.startTime.getMinutes();
+    const seconds = this.startTime.getSeconds();
+
+    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
+  }
+
+  /**
+   * Convert a time string to miliseconds
+   * @method milisecondsFromString
+   * @param  {String}  time Time in the format hh:mm:ss
+   * @return {Number}  the time in miliseconds
+   */
+  static milisecondsFromString(time) {
+    const parts = time.split(&apos;:&apos;);
+    if (parts.length === 1) {
+      return (parts[0] * 1000);
+    }
+    if (parts.length === 2) {
+      return ((parts[0] * 1000 * 60) + (parts[1] * 1000));
+    }
+    return ((parts[0] * 1000 * 60 * 60) + (parts[1] * 1000 * 60) + (parts[2] * 1000));
+  }
+
+  /**
+   * Convert a miliseconds number to formated time
+   * @method timeStringFromDate
+   * @param  {Number}              date Miliseconds time number
+   * @return {String} The time formated as hh:mm:ss
+   */
+  static timeStringFromDate(date) {
+    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  }
+
+  /**
+   * Convert a miliseconds number to formated time
+   * @method stringFromMiliseconds
+   * @param  {Number}              time Miliseconds time number
+   * @return {String} The time formated as hh:mm:ss
+   */
+  static stringFromMiliseconds(time) {
+    let mili = time;
+
+    const hours = Math.floor(mili / 1000 / 60 / 60);
+    mili -= hours * 1000 * 60 * 60;
+    const minutes = Math.floor(mili / 1000 / 60);
+    mili -= minutes * 1000 * 60;
+    const seconds = Math.floor(mili / 1000);
+
+    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
+  }
+
+  /**
+   * Calculates the time difference from two time strings
+   * @method diffFromString
+   * @param  {String}       start The start time in the format hh:mm:ss
+   * @param  {String}       end   The end time in the format hh:mm:ss
+   * @return {Number}       Miliseconds difference
+   */
+  static diffFromString(start, end) {
+    const splitStr = start.split(&apos;:&apos;);
+    const splitEnd = end.split(&apos;:&apos;);
+    const strTime = new Date(0, 0, 0, splitStr[0], splitStr[1], splitStr[2]);
+    const endTime = new Date(0, 0, 0, splitEnd[0], splitEnd[1], splitEnd[2]);
+    return endTime.getTime() - strTime.getTime();
+  }
+
+  /**
+   * Summ the time from two time strings
+   * @method diffFromString
+   * @param  {String}       start       The start time in the format hh:mm:ss
+   * @param  {String}       increment   The time that must be added in the format hh:mm:ss
+   * @return {String}       The time after the summ in the format hh:mm:ss
+   */
+  static add(start, increment) {
+    const times = [];
+    const splitStr = start.split(&apos;:&apos;);
+    const splitIncrm = increment.split(&apos;:&apos;);
+
+    for (let i = 0; i &lt; 3; i += 1) {
+      splitStr[i] = (isNaN(parseInt(splitStr[i], 10))) ? 0 : parseInt(splitStr[i], 10);
+      splitIncrm[i] = (isNaN(parseInt(splitIncrm[i], 10))) ? 0 : parseInt(splitIncrm[i], 10);
+      times[i] = splitStr[i] + splitIncrm[i];
+    }
+
+    let hours = times[0];
+    let minutes = times[1];
+    let seconds = times[2];
+
+
+    if (seconds &gt;= 60) {
+      minutes += parseInt(seconds / 60, 10);
+      seconds %= 60;
+    }
+
+    if (minutes &gt;= 60) {
+      hours += parseInt(minutes / 60, 10);
+      minutes %= 60;
+    }
+
+    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
+  }
+
+  /**
+   * Get the final time, after all reminder times
+   * @method getFinal
+   * @param  {String} startTime      The start time formated in as hh:mm:ss
+   * @param  {Array} incrementArray  The timeTable array with all reminders
+   * @param  {Boolean} log           If the log with the alerts should be displayed
+   * @return {String} The fnal time formated as hh:mm:ss
+   */
+  static getFinal(startTime, incrementArray, log) {
+    let time = startTime;
+    let counter = 1;
+    incrementArray.forEach((increment) =&gt; {
+      const start = time;
+      time = Time.add(time, increment);
+      debug(&apos;start:&apos;, start, &apos;increment:&apos;, increment, &apos;result:&apos;, time);
+      if (log) {
+        const ordinal = Format.fixedLength(Format.ordinal(counter), 5);
+        Status.log(`${ordinal}: ${start} (next on ${increment})`);
+        counter += 1;
+      }
+    });
+    return time;
+  }
+
+  /**
+   * Set an average time in the timeTable according to the number of slots and
+   * the available time. Fill the orignal reminders and return the full time
+   * table array
+   * @method fillReminder
+   * @param  {Number}   quantity  How many alerts should be set
+   * @param  {String}   startTime      The start time formated in as hh:mm:ss
+   * @param  {String}   endTime   The end time in the format hh:mm:ss
+   * @param  {Array}    reminders The reminders array
+   * @param  {Boolean} log           If the log with the alerts should be displayed
+   * @return {Array} The full filled time table (reminders) array
+   */
+  static fillReminder(quantity, startTime, endTime, reminders, log) {
+    const time = Time.getFinal(startTime, reminders, log);
+    const diff = Time.diffFromString(time, endTime);
+    const averageTime = diff / quantity;
+    const averageTimeString = Time.stringFromMiliseconds(averageTime);
+    if (log) {
+      const ordinal = Format.fixedLength(Format.ordinal(quantity + 1), 5);
+      Time.getFinal(time, new Array(quantity).fill(averageTimeString), log);
+      Status.log(`${ordinal}: ${endTime} (last one)`);
+    }
+    debug(&apos;start:&apos;, time, &apos;end:&apos;, endTime, &apos;diff:&apos;, averageTimeString);
+    const filled = new Array(quantity).fill(averageTimeString);
+    return reminders.concat(filled);
+  }
+}
+
+module.exports = Time;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.1)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

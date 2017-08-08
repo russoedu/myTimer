@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | Smoke and the Water</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Smoke and the Water"><meta property="twitter:description" content="simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/russoedu/smoke-and-the-water"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#controllers">controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/controllers/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helpers">helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/helpers/Format.js~Format.html">Format</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/helpers/Time.js~Time.html">Time</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#models">models</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/DefaultTimerModel.js~DefaultTimerModel.html">DefaultTimerModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/ReminderModel.js~RemindeModel.html">RemindeModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/TimerModel.js~TimerModel.html">TimerModel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#views">views</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Alert.js~Alert.html">Alert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Computer.js~Computer.html">Computer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Phone.js~Phone.html">Phone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Status.js~Status.html">Status</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Terminal.js~Terminal.html">Terminal</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><p><img src="https://github.com/russoedu/smoke-and-the-water/blob/master/README/smoke-and-the-water.jpg?raw=true" alt=""></p>
+<p>Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water.</p>
+<p>Sure you can use it to remember daily stuff&#x2026; but it was created for my own health needs &#x1F62C;.</p>
+<h2 id="configuration">Configuration</h2><h3 id="default-configuration">Default configuration</h3><p>The default configuration can be changed but can&apos;t be removed from the timers folder.</p>
+<p>The <strong>default configurations are used only when a configuration is not set</strong>. For instance, you can set a single &quot;endTime&quot; for all your timers in the default.json and all timers will use this config. If you have a timer that needs a different &quot;endTime&quot;, this configuration will overwrite the default.</p>
+<h2 id="configuring-your-timers">Configuring your timers</h2><p>Configure or edit the other timers located in the timers folder.</p>
+<pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;title&quot;: &quot;Remember&quot;,
+  &quot;message&quot;: &quot;&#x1F370; The cake is a lie&quot;,
+  &quot;name&quot;: &quot;lie remembered&quot;,
+  &quot;endTime&quot;: &quot;23:30&quot;,
+  &quot;bgColor&quot;: &quot;bgYellow&quot;,
+  &quot;quantity&quot;: 5,
+  &quot;reminders&quot;: [
+    &quot;00:30:00&quot;,
+    &quot;00:45:00&quot;,
+    &quot;01:00:00&quot;
+  ],
+  &quot;media&quot;: {
+    &quot;terminal&quot;: true,
+    &quot;computer&quot;: true,
+    &quot;phone&quot;: true
+  },
+}</code>
+</code></pre>
+<p>You should set:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Option</th>
+<th style="text-align:left">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>title</strong></td>
+<td style="text-align:left">used in the desktop alert</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>message</strong></td>
+<td style="text-align:left">message for the alert used in all versions</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>name</strong></td>
+<td style="text-align:left">the name used to show how many times you did that timer</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>endTime</strong></td>
+<td style="text-align:left">when you want your timer to give the last alert in the day</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>bgColor</strong></td>
+<td style="text-align:left">terminal background color</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>quantity</strong></td>
+<td style="text-align:left">the number of times you want this to be repeated</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>reminders</strong></td>
+<td style="text-align:left">list with the repeat timers in &quot;hh:mm:ss&quot; format. If you have less timers than the number you set in <code>quantity</code>, the rest of the reminders will be distributed until the <code>endTime</code>. The time must use <code>hh:mm:ss</code> format.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>media</strong></td>
+<td style="text-align:left">object to define where the alerts should be displayed. <strong>If none is set</strong>, not even in the default <code>.json</code>, <strong>only terminal alert will be displayed</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mobile-push">Mobile push</h2><p>To use the mobile push you need to install the app <a href="http://pushme.jagcesar.se">Push Me</a> and get your key. In the app, click on the key to copy to the clipboard.</p>
+<p>Then you need to copy or rename the <code>.env.example</code> file to <code>.env</code> and insert your key.</p>
+<h2 id="usage">Usage</h2><p>First, install all nee packages with <code>npm install</code>.</p>
+<p>Then, create your timers (timers folder).</p>
+<p>Finaly, run <code>npm start</code> and the app will run, alerting you in the computer and on your phone.</p>
+<h2 id="example">Example</h2><h3 id="desktop-alert">Desktop alert</h3><p><img src="https://github.com/russoedu/smoke-and-the-water/blob/master/README/alert.png?raw=true" alt="Alert example"></p>
+<h3 id="mobile-push">Mobile push</h3><p><img src="https://github.com/russoedu/smoke-and-the-water/blob/master/README/mobile.png?raw=true" alt="Alert example"></p>
+<h3 id="terminal-message">Terminal message</h3><p><img src="https://github.com/russoedu/smoke-and-the-water/blob/master/README/terminal.png?raw=true" alt="Alert example"></p>
+<h2 id="todo">TODO</h2><h3 id="working-on&#x2026;">Working on&#x2026;</h3><ul>
+<li>New <code>reminders</code> options to make it easier to crate your time table:<ul>
+<li>&quot;in&quot;: &quot;Time after the beginning&quot;</li>
+<li>&quot;after&quot;: &quot;Time after the previous&quot;</li>
+<li>&quot;at&quot;: &quot;On an exact time of the day&quot;</li>
+</ul>
+</li>
+</ul>
+<pre><code><code class="source-code prettyprint">&quot;reminders&quot;: {
+  &quot;Do something fun&quot;: {
+    &quot;in&quot;: &quot;00:00:00&quot;
+  },
+  &quot;Read news&quot;: {
+    &quot;in&quot;: &quot;00:30:00&quot;
+  },
+  &quot;Go brush your teeth and your hair!&quot;: {
+    &quot;in&quot;: &quot;01:00:00&quot;
+  },
+  &quot;Go to work&quot;: {
+    &quot;after&quot;: &quot;00:05:00&quot;
+  },
+  &quot;Check Trello&quot;: {
+    &quot;after&quot;: &quot;01:00:00&quot;
+  },
+  &quot;Work&quot;: {
+    &quot;after&quot;: &quot;00:15:00&quot;
+  },
+  &quot;Do something fun!!!&quot;: {
+    &quot;after&quot;: &quot;03:45:00&quot;
+  },
+  &quot;Prepare dinner&quot;: {
+    &quot;at&quot;: &quot;18:00:00&quot;
+  }</code>
+</code></pre><ul>
+<li>Possibility to disable alert on some days:</li>
+<li><pre><code><code class="source-code prettyprint">&quot;enable&quot;: [
+&quot;weekdays&quot;,
+&quot;weekends&quot;,
+&quot;sun&quot;,
+&quot;mon&quot;,
+&quot;tue&quot;,
+&quot;wed&quot;,
+&quot;thu&quot;,
+&quot;fri&quot;,
+&quot;sat&quot;,
+0, 1, 2, 3, 4, 5, 6, 7
+]</code>
+</code></pre></li>
+</ul>
+<h3 id="mandatory">Mandatory</h3><ul>
+<li><del>Calculate the remaining alerts.</del></li>
+<li><del>Finish execution after all timers finish.</del></li>
+<li>Check if all needed config are filled or have default values.</li>
+<li><del>Make sure <code>quantity</code> is smaller than the length of <code>reminders</code>.</del></li>
+<li>Create tests.</li>
+<li><del>Look for performance issues.</del></li>
+</ul>
+<h3 id="nice-to-have">Nice to have</h3><ul>
+<li>Create better CLI interface</li>
+<li>Create config wizard</li>
+<li>Let user define the first alert instead of setting when the app starts</li>
+<li>Set individual messages for each timer (change <code>reminders</code> from an array to an object)</li>
+</ul>
+<h3 id="maybe-in-the-future&#x2026;">Maybe in the future&#x2026;</h3><ul>
+<li>Create Electron app</li>
+</ul>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.1)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,2647 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/controllers/Timer.js",
+    "content": "const Alert = require('../views/Alert');\n// const Status = require('../views/Status');\nconst Time = require('../helpers/Time');\n// const DefaultTimerModel = require('../models/DefaultTimerModel');\n\n/**\n * Run the reminders of a TimerModel object\n * @example\n * new Timer(timerModel)\n *  .then((timer) => {\n *    ...\n *  })\n * .catch((err) => {\n *    if (err) {\n *      console.error(err);\n *    }\n *  });\n */\nclass Timer {\n  /**\n   * Timer constructor. Set the TimerModel into the Timer\n   * @param  {TimerModel}    timer The timer model created from the JSON\n   * @return {Promise<Timer|null>} Return the Timer object with the reminder filled\n   */\n  constructor(timer) {\n    return new Promise((resolve) => {\n      this.timer = timer;\n      resolve(this);\n    });\n  }\n\n  /**\n   * Run recursively displaying the reminder's alerts and wait for each reminder's time.\n   * Stops when counter reaches the timer reminder's length.\n   * @param  {Number} [counter = 0] The number of the iteration\n   */\n  start(counter = 0) {\n    Alert.display(this.timer, counter + 1);\n\n    if (counter < this.timer.reminders.length) {\n      setTimeout(() => {\n        this.start(counter + 1);\n      }, Time.milisecondsFromString(this.timer.reminders[counter]));\n    }\n  }\n}\n\nmodule.exports = Timer;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/controllers/Timer.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "Alert",
+    "memberof": "src/controllers/Timer.js",
+    "static": true,
+    "longname": "src/controllers/Timer.js~Alert",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/controllers/Timer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "Time",
+    "memberof": "src/controllers/Timer.js",
+    "static": true,
+    "longname": "src/controllers/Timer.js~Time",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/controllers/Timer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "name": "Timer",
+    "memberof": "src/controllers/Timer.js",
+    "static": true,
+    "longname": "src/controllers/Timer.js~Timer",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/controllers/Timer.js",
+    "importStyle": "Timer",
+    "description": "Run the reminders of a TimerModel object",
+    "examples": [
+      "new Timer(timerModel)\n .then((timer) => {\n   ...\n })\n.catch((err) => {\n   if (err) {\n     console.error(err);\n   }\n });"
+    ],
+    "lineNumber": 19,
+    "interface": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/controllers/Timer.js~Timer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/controllers/Timer.js~Timer#constructor",
+    "access": "public",
+    "description": "Timer constructor. Set the TimerModel into the Timer",
+    "lineNumber": 25,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "TimerModel"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "timer",
+        "description": "The timer model created from the JSON"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<Timer|null>"
+      ],
+      "spread": false,
+      "description": "Return the Timer object with the reminder filled"
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "timer",
+    "memberof": "src/controllers/Timer.js~Timer",
+    "static": false,
+    "longname": "src/controllers/Timer.js~Timer#timer",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "start",
+    "memberof": "src/controllers/Timer.js~Timer",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/controllers/Timer.js~Timer#start",
+    "access": "public",
+    "description": "Run recursively displaying the reminder's alerts and wait for each reminder's time.\nStops when counter reaches the timer reminder's length.",
+    "lineNumber": 37,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " 0",
+        "defaultRaw": 0,
+        "name": "counter",
+        "description": "The number of the iteration"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/helpers/Format.js",
+    "content": "/**\n * Class to format numbers\n * @class\n * @module Alert\n */\nclass Format {\n  /**\n   * Display the correct ordinal notation of a number\n   * @method ordinal\n   * @param  {Number} num The number to be formated\n   * @return {String} The number with it's ordinal notation (i.e. 11th)\n   */\n  static ordinal(num) {\n    const j = num % 10;\n    const k = num % 100;\n\n    if (j === 1 && k !== 11) {\n      return `${num}st`;\n    }\n    if (j === 2 && k !== 12) {\n      return `${num}nd`;\n    }\n    if (j === 3 && k !== 13) {\n      return `${num}rd`;\n    }\n    return `${num}th`;\n  }\n\n  static fixedLength(str, length) {\n    return ' '.repeat(length - str.length) + str;\n  }\n}\n\nmodule.exports = Format;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/helpers/Format.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "class",
+    "name": "Format",
+    "memberof": "src/helpers/Format.js",
+    "static": true,
+    "longname": "src/helpers/Format.js~Format",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/helpers/Format.js",
+    "importStyle": "Format",
+    "description": "Class to format numbers",
+    "lineNumber": 6,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Alert"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "ordinal",
+    "memberof": "src/helpers/Format.js~Format",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Format.js~Format.ordinal",
+    "access": "public",
+    "description": "Display the correct ordinal notation of a number",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "ordinal"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "num",
+        "description": "The number to be formated"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The number with it's ordinal notation (i.e. 11th)"
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "fixedLength",
+    "memberof": "src/helpers/Format.js~Format",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Format.js~Format.fixedLength",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "params": [
+      {
+        "name": "str",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "length",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/helpers/Time.js",
+    "content": "const debug = require('debug')('Time');\nconst Status = require('../views/Status');\nconst Format = require('../helpers/Format');\n\nlet instance = null;\n\nfunction addLeadingZero(time) {\n  return time < 10 ? `0${time}` : time;\n}\n/**\n * Time manupulation class\n * @class Time\n * @module Time\n */\nclass Time {\n  /**\n   * Create the singleton instance and set the current time\n   * @constructor\n   * @return {Object} The singleton instance\n   */\n  constructor() {\n    if (!instance) {\n      instance = this;\n    }\n    this.startTime = new Date();\n\n    return instance;\n  }\n\n  /**\n   * Get the time set in the creation of the first object\n   * @method getStart\n   * @return {String} The start time formated as hh:mm:ss\n   */\n  getStart() {\n    const hours = this.startTime.getHours();\n    const minutes = this.startTime.getMinutes();\n    const seconds = this.startTime.getSeconds();\n\n    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;\n  }\n\n  /**\n   * Convert a time string to miliseconds\n   * @method milisecondsFromString\n   * @param  {String}  time Time in the format hh:mm:ss\n   * @return {Number}  the time in miliseconds\n   */\n  static milisecondsFromString(time) {\n    const parts = time.split(':');\n    if (parts.length === 1) {\n      return (parts[0] * 1000);\n    }\n    if (parts.length === 2) {\n      return ((parts[0] * 1000 * 60) + (parts[1] * 1000));\n    }\n    return ((parts[0] * 1000 * 60 * 60) + (parts[1] * 1000 * 60) + (parts[2] * 1000));\n  }\n\n  /**\n   * Convert a miliseconds number to formated time\n   * @method timeStringFromDate\n   * @param  {Number}              date Miliseconds time number\n   * @return {String} The time formated as hh:mm:ss\n   */\n  static timeStringFromDate(date) {\n    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;\n  }\n\n  /**\n   * Convert a miliseconds number to formated time\n   * @method stringFromMiliseconds\n   * @param  {Number}              time Miliseconds time number\n   * @return {String} The time formated as hh:mm:ss\n   */\n  static stringFromMiliseconds(time) {\n    let mili = time;\n\n    const hours = Math.floor(mili / 1000 / 60 / 60);\n    mili -= hours * 1000 * 60 * 60;\n    const minutes = Math.floor(mili / 1000 / 60);\n    mili -= minutes * 1000 * 60;\n    const seconds = Math.floor(mili / 1000);\n\n    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;\n  }\n\n  /**\n   * Calculates the time difference from two time strings\n   * @method diffFromString\n   * @param  {String}       start The start time in the format hh:mm:ss\n   * @param  {String}       end   The end time in the format hh:mm:ss\n   * @return {Number}       Miliseconds difference\n   */\n  static diffFromString(start, end) {\n    const splitStr = start.split(':');\n    const splitEnd = end.split(':');\n    const strTime = new Date(0, 0, 0, splitStr[0], splitStr[1], splitStr[2]);\n    const endTime = new Date(0, 0, 0, splitEnd[0], splitEnd[1], splitEnd[2]);\n    return endTime.getTime() - strTime.getTime();\n  }\n\n  /**\n   * Summ the time from two time strings\n   * @method diffFromString\n   * @param  {String}       start       The start time in the format hh:mm:ss\n   * @param  {String}       increment   The time that must be added in the format hh:mm:ss\n   * @return {String}       The time after the summ in the format hh:mm:ss\n   */\n  static add(start, increment) {\n    const times = [];\n    const splitStr = start.split(':');\n    const splitIncrm = increment.split(':');\n\n    for (let i = 0; i < 3; i += 1) {\n      splitStr[i] = (isNaN(parseInt(splitStr[i], 10))) ? 0 : parseInt(splitStr[i], 10);\n      splitIncrm[i] = (isNaN(parseInt(splitIncrm[i], 10))) ? 0 : parseInt(splitIncrm[i], 10);\n      times[i] = splitStr[i] + splitIncrm[i];\n    }\n\n    let hours = times[0];\n    let minutes = times[1];\n    let seconds = times[2];\n\n\n    if (seconds >= 60) {\n      minutes += parseInt(seconds / 60, 10);\n      seconds %= 60;\n    }\n\n    if (minutes >= 60) {\n      hours += parseInt(minutes / 60, 10);\n      minutes %= 60;\n    }\n\n    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;\n  }\n\n  /**\n   * Get the final time, after all reminder times\n   * @method getFinal\n   * @param  {String} startTime      The start time formated in as hh:mm:ss\n   * @param  {Array} incrementArray  The timeTable array with all reminders\n   * @param  {Boolean} log           If the log with the alerts should be displayed\n   * @return {String} The fnal time formated as hh:mm:ss\n   */\n  static getFinal(startTime, incrementArray, log) {\n    let time = startTime;\n    let counter = 1;\n    incrementArray.forEach((increment) => {\n      const start = time;\n      time = Time.add(time, increment);\n      debug('start:', start, 'increment:', increment, 'result:', time);\n      if (log) {\n        const ordinal = Format.fixedLength(Format.ordinal(counter), 5);\n        Status.log(`${ordinal}: ${start} (next on ${increment})`);\n        counter += 1;\n      }\n    });\n    return time;\n  }\n\n  /**\n   * Set an average time in the timeTable according to the number of slots and\n   * the available time. Fill the orignal reminders and return the full time\n   * table array\n   * @method fillReminder\n   * @param  {Number}   quantity  How many alerts should be set\n   * @param  {String}   startTime      The start time formated in as hh:mm:ss\n   * @param  {String}   endTime   The end time in the format hh:mm:ss\n   * @param  {Array}    reminders The reminders array\n   * @param  {Boolean} log           If the log with the alerts should be displayed\n   * @return {Array} The full filled time table (reminders) array\n   */\n  static fillReminder(quantity, startTime, endTime, reminders, log) {\n    const time = Time.getFinal(startTime, reminders, log);\n    const diff = Time.diffFromString(time, endTime);\n    const averageTime = diff / quantity;\n    const averageTimeString = Time.stringFromMiliseconds(averageTime);\n    if (log) {\n      const ordinal = Format.fixedLength(Format.ordinal(quantity + 1), 5);\n      Time.getFinal(time, new Array(quantity).fill(averageTimeString), log);\n      Status.log(`${ordinal}: ${endTime} (last one)`);\n    }\n    debug('start:', time, 'end:', endTime, 'diff:', averageTimeString);\n    const filled = new Array(quantity).fill(averageTimeString);\n    return reminders.concat(filled);\n  }\n}\n\nmodule.exports = Time;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/helpers/Time.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "variable",
+    "name": "debug",
+    "memberof": "src/helpers/Time.js",
+    "static": true,
+    "longname": "src/helpers/Time.js~debug",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/helpers/Time.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "variable",
+    "name": "Status",
+    "memberof": "src/helpers/Time.js",
+    "static": true,
+    "longname": "src/helpers/Time.js~Status",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/helpers/Time.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "variable",
+    "name": "Format",
+    "memberof": "src/helpers/Time.js",
+    "static": true,
+    "longname": "src/helpers/Time.js~Format",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/helpers/Time.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "variable",
+    "name": "instance",
+    "memberof": "src/helpers/Time.js",
+    "static": true,
+    "longname": "src/helpers/Time.js~instance",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/helpers/Time.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "addLeadingZero",
+    "memberof": "src/helpers/Time.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~addLeadingZero",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/helpers/Time.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "time",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "class",
+    "name": "Time",
+    "memberof": "src/helpers/Time.js",
+    "static": true,
+    "longname": "src/helpers/Time.js~Time",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/helpers/Time.js",
+    "importStyle": "Time",
+    "description": "Time manupulation class",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Time"
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Time"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 66,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/helpers/Time.js~Time#constructor",
+    "access": "public",
+    "description": "Create the singleton instance and set the current time",
+    "lineNumber": 21,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "The singleton instance"
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "member",
+    "name": "startTime",
+    "memberof": "src/helpers/Time.js~Time",
+    "static": false,
+    "longname": "src/helpers/Time.js~Time#startTime",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "getStart",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/helpers/Time.js~Time#getStart",
+    "access": "public",
+    "description": "Get the time set in the creation of the first object",
+    "lineNumber": 35,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "getStart"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The start time formated as hh:mm:ss"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "milisecondsFromString",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.milisecondsFromString",
+    "access": "public",
+    "description": "Convert a time string to miliseconds",
+    "lineNumber": 49,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "milisecondsFromString"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "time",
+        "description": "Time in the format hh:mm:ss"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "the time in miliseconds"
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "timeStringFromDate",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.timeStringFromDate",
+    "access": "public",
+    "description": "Convert a miliseconds number to formated time",
+    "lineNumber": 66,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "timeStringFromDate"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "date",
+        "description": "Miliseconds time number"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The time formated as hh:mm:ss"
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "stringFromMiliseconds",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.stringFromMiliseconds",
+    "access": "public",
+    "description": "Convert a miliseconds number to formated time",
+    "lineNumber": 76,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "stringFromMiliseconds"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "time",
+        "description": "Miliseconds time number"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The time formated as hh:mm:ss"
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "method",
+    "name": "diffFromString",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.diffFromString",
+    "access": "public",
+    "description": "Calculates the time difference from two time strings",
+    "lineNumber": 95,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "diffFromString"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "start",
+        "description": "The start time in the format hh:mm:ss"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "end",
+        "description": "The end time in the format hh:mm:ss"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": "Miliseconds difference"
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "add",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.add",
+    "access": "public",
+    "description": "Summ the time from two time strings",
+    "lineNumber": 110,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "diffFromString"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "start",
+        "description": "The start time in the format hh:mm:ss"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "increment",
+        "description": "The time that must be added in the format hh:mm:ss"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The time after the summ in the format hh:mm:ss"
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "getFinal",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.getFinal",
+    "access": "public",
+    "description": "Get the final time, after all reminder times",
+    "lineNumber": 147,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "getFinal"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startTime",
+        "description": "The start time formated in as hh:mm:ss"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "incrementArray",
+        "description": "The timeTable array with all reminders"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "log",
+        "description": "If the log with the alerts should be displayed"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": "The fnal time formated as hh:mm:ss"
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "fillReminder",
+    "memberof": "src/helpers/Time.js~Time",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/helpers/Time.js~Time.fillReminder",
+    "access": "public",
+    "description": "Set an average time in the timeTable according to the number of slots and\nthe available time. Fill the orignal reminders and return the full time\ntable array",
+    "lineNumber": 175,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "fillReminder"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "quantity",
+        "description": "How many alerts should be set"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "startTime",
+        "description": "The start time formated in as hh:mm:ss"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endTime",
+        "description": "The end time in the format hh:mm:ss"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "reminders",
+        "description": "The reminders array"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "log",
+        "description": "If the log with the alerts should be displayed"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "The full filled time table (reminders) array"
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "const debug = require('debug')('index');\nconst fs = require('fs');\nconst Status = require('./views/Status');\nconst Timer = require('./controllers/Timer');\nconst TimerModel = require('./models/TimerModel');\nconst Time = require('./helpers/Time');\n\n// Start the status and the start time\nconst time = new Time();\ndebug(time.getStart());\n\n/**\n * Initiate the process, reading each JSON in 'timers' folder\n */\nfs.readdirSync('./timers/')\n  .forEach((file) => {\n    new TimerModel(file)\n      .then(timerData => new Timer(timerData))\n      .then((timer) => {\n        timer.start();\n      })\n      .catch((err) => {\n        if (err) {\n          Status.error(err);\n        }\n      });\n  });\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 77,
+    "kind": "variable",
+    "name": "debug",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~debug",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "variable",
+    "name": "fs",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~fs",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "variable",
+    "name": "Status",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~Status",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "variable",
+    "name": "Timer",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~Timer",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "variable",
+    "name": "TimerModel",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~TimerModel",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "variable",
+    "name": "Time",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~Time",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "variable",
+    "name": "time",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~time",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "src/helpers/Time.js~Time"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/models/DefaultTimerModel.js",
+    "content": "const fs = require('fs');\nconst path = require('path');\n\nlet instance = null;\n\n/**\n * Singleton class that gets the default timer and has function to merge it\n * with the user's timers\n * @class DefaultTimerModel\n * @module Models\n */\nclass DefaultTimerModel {\n  /**\n   * Create the singleton instance and set the current time\n   * @constructor\n   * @return {Object} The singleton instance\n   */\n  constructor() {\n    if (!instance) {\n      instance = this;\n    }\n    const timersFolder = './timers/';\n    const defaultPath = path.join(timersFolder, 'default.json');\n    const defaultTimer = JSON.parse(fs.readFileSync(defaultPath), 'utf8');\n\n    this.defaultTimer = defaultTimer;\n\n    return instance;\n  }\n\n  /**\n   * Merge the default config with the specific config, overwriting any default configuration set\n   * in the specific\n   * @method merge\n   * @param  {Object} timer TimerModel object to be merged\n   * @return {Object} The merged config object\n   */\n  merge(timer) {\n    const timerConfig = {};\n    Object.assign(timerConfig, this.defaultTimer, timer);\n    return timerConfig;\n  }\n}\n\nmodule.exports = DefaultTimerModel;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/models/DefaultTimerModel.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "variable",
+    "name": "fs",
+    "memberof": "src/models/DefaultTimerModel.js",
+    "static": true,
+    "longname": "src/models/DefaultTimerModel.js~fs",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/DefaultTimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "variable",
+    "name": "path",
+    "memberof": "src/models/DefaultTimerModel.js",
+    "static": true,
+    "longname": "src/models/DefaultTimerModel.js~path",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/DefaultTimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "variable",
+    "name": "instance",
+    "memberof": "src/models/DefaultTimerModel.js",
+    "static": true,
+    "longname": "src/models/DefaultTimerModel.js~instance",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/DefaultTimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "class",
+    "name": "DefaultTimerModel",
+    "memberof": "src/models/DefaultTimerModel.js",
+    "static": true,
+    "longname": "src/models/DefaultTimerModel.js~DefaultTimerModel",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/models/DefaultTimerModel.js",
+    "importStyle": "DefaultTimerModel",
+    "description": "Singleton class that gets the default timer and has function to merge it\nwith the user's timers",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "DefaultTimerModel"
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Models"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 89,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/models/DefaultTimerModel.js~DefaultTimerModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/models/DefaultTimerModel.js~DefaultTimerModel#constructor",
+    "access": "public",
+    "description": "Create the singleton instance and set the current time",
+    "lineNumber": 18,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "The singleton instance"
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "member",
+    "name": "defaultTimer",
+    "memberof": "src/models/DefaultTimerModel.js~DefaultTimerModel",
+    "static": false,
+    "longname": "src/models/DefaultTimerModel.js~DefaultTimerModel#defaultTimer",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "merge",
+    "memberof": "src/models/DefaultTimerModel.js~DefaultTimerModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/models/DefaultTimerModel.js~DefaultTimerModel#merge",
+    "access": "public",
+    "description": "Merge the default config with the specific config, overwriting any default configuration set\nin the specific",
+    "lineNumber": 38,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "merge"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "timer",
+        "description": "TimerModel object to be merged"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": "The merged config object"
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/models/ReminderModel.js",
+    "content": "class RemindeModel {\n  // constructor() {\n  //\n  // }\n}\n\nmodule.exports = RemindeModel;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/models/ReminderModel.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "class",
+    "name": "RemindeModel",
+    "memberof": "src/models/ReminderModel.js",
+    "static": true,
+    "longname": "src/models/ReminderModel.js~RemindeModel",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/models/ReminderModel.js",
+    "importStyle": "RemindeModel",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
+    "name": "src/models/TimerModel.js",
+    "content": "const fs = require('fs');\nconst path = require('path');\nconst debug = require('debug')('TimerModel');\nconst Time = require('../helpers/Time');\nconst Status = require('../views/Status');\nconst DefaultTimerModel = require('../models/DefaultTimerModel');\n\n/**\n * Fill the reminder table with the correct times according to the timer\n * 'reminders' and 'endTime'. The timetable is filled in the Class object on\n * 'this.timer.reminders'\n * @private\n */\nfunction setReminderTable() {\n  const reminders = [];\n  const time = new Time();\n  const now = time.getStart();\n\n  // Quantity is set and the quantity of reminders is less than or equal\n  // the quantity (or no reminder was set)\n  Status.log(`Reminders for ${this.fileName}`);\n  if (!!this.quantity && (!this.reminders || this.reminders.length <= this.quantity)) {\n    debug('setReminderTable', this.fileName, 'case 1');\n    // Create an empty reminders array if none was set\n    if (!this.reminders) {\n      this.reminders = [];\n    }\n\n    const left = this.quantity - this.reminders.length - 1;\n    this.reminders = Time.fillReminder(left, now, this.endTime, this.reminders, true);\n  } else if (!this.quantity && !!this.reminders && this.reminders.length > 0) {\n    debug('setReminderTable', this.fileName, 'case 2');\n    const quantity = this.reminders.length - 1;\n    this.reminders = Time.fillReminder(quantity, now, this.endTime, this.reminders, true);\n  } else {\n    debug('setReminderTable', this.fileName, 'case 3 - error');\n    const message = `Error on ${this.fileName} configuration. Please be sure that \"quantity\" is smaller or equal the length of \"reminders\".`;\n    Status.error(`ERROR: ${message}`);\n  }\n  Object.assign(this, reminders, this);\n}\n\n\n/**\n * TimerModel class sets all needed data for a timer controller to run\n * @example\n * new TimerModel(file)\n *   .then(timer => {\n *     console.log(timer);\n *   });\n * // The TimerModel object\n * TimerModel {\n *  fileName: 'water',\n *  title: 'Water time',\n *  message: '🚰  Drink a glass of water!',\n *  name: 'glass',\n *  endTime: '22:00:00',\n *  bgColor: 'bgBlue',\n *  quantity: 4,\n *  media: {\n *    terminal: false,\n *    computer: false,\n *    phone: true\n *  },\n *  reminders: [\n *    '00:25:24',\n *    '00:25:24',\n *    '00:25:24'\n *  ]\n * }\n *\n *\n */\nclass TimerModel {\n  /**\n   * Create a TimerModel object from a JSON, set it's file name and merge with the default timer.\n   * Ignores 'default.json' and fileNames that's not a JSON (by it's extention).\n   * @param  {String}    fileName Name of the timer JSON\n   * @return {Promise<TimerModel|Error>} TimerModel object with all data on the JSON, plus it's\n   * name and data merged from the default timer\n   */\n  constructor(fileName) {\n    debug('constructor', fileName);\n    return new Promise((resolve, reject) => {\n      if (fileName === 'default.json' || path.extname(fileName) !== '.json') {\n        reject(null);\n      } else {\n        const timersFolder = './timers/';\n        const filePath = path.join(timersFolder, fileName);\n\n        fs.readFile(filePath, 'utf8', (err, data) => {\n          if (err) {\n            reject(err);\n          } else {\n            // Set the file name\n            this.fileName = path.basename(fileName, '.json');\n\n            // Create the object\n\n            // Fill with the default\n            const defaultTimer = new DefaultTimerModel();\n            const timer = defaultTimer.merge(JSON.parse(data));\n            Object.assign(this, timer, this);\n            debug('before setReminders table', this);\n            setReminderTable.bind(this)();\n            resolve(this);\n          }\n        });\n      }\n    });\n  }\n}\n\nmodule.exports = TimerModel;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/models/TimerModel.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 95,
+    "kind": "variable",
+    "name": "fs",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~fs",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "variable",
+    "name": "path",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~path",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "variable",
+    "name": "debug",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~debug",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "variable",
+    "name": "Time",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~Time",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 99,
+    "kind": "variable",
+    "name": "Status",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~Status",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 100,
+    "kind": "variable",
+    "name": "DefaultTimerModel",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~DefaultTimerModel",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "function",
+    "name": "setReminderTable",
+    "memberof": "src/models/TimerModel.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/models/TimerModel.js~setReminderTable",
+    "access": "private",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": null,
+    "description": "Fill the reminder table with the correct times according to the timer\n'reminders' and 'endTime'. The timetable is filled in the Class object on\n'this.timer.reminders'",
+    "lineNumber": 14,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 102,
+    "kind": "class",
+    "name": "TimerModel",
+    "memberof": "src/models/TimerModel.js",
+    "static": true,
+    "longname": "src/models/TimerModel.js~TimerModel",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/models/TimerModel.js",
+    "importStyle": "TimerModel",
+    "description": "TimerModel class sets all needed data for a timer controller to run",
+    "examples": [
+      "new TimerModel(file)\n  .then(timer => {\n    console.log(timer);\n  });\n// The TimerModel object\nTimerModel {\n fileName: 'water',\n title: 'Water time',\n message: '🚰  Drink a glass of water!',\n name: 'glass',\n endTime: '22:00:00',\n bgColor: 'bgBlue',\n quantity: 4,\n media: {\n   terminal: false,\n   computer: false,\n   phone: true\n },\n reminders: [\n   '00:25:24',\n   '00:25:24',\n   '00:25:24'\n ]\n}"
+    ],
+    "lineNumber": 74,
+    "interface": false
+  },
+  {
+    "__docId__": 103,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/models/TimerModel.js~TimerModel",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/models/TimerModel.js~TimerModel#constructor",
+    "access": "public",
+    "description": "Create a TimerModel object from a JSON, set it's file name and merge with the default timer.\nIgnores 'default.json' and fileNames that's not a JSON (by it's extention).",
+    "lineNumber": 82,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fileName",
+        "description": "Name of the timer JSON"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise<TimerModel|Error>"
+      ],
+      "spread": false,
+      "description": "TimerModel object with all data on the JSON, plus it's\nname and data merged from the default timer"
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "member",
+    "name": "fileName",
+    "memberof": "src/models/TimerModel.js~TimerModel",
+    "static": false,
+    "longname": "src/models/TimerModel.js~TimerModel#fileName",
+    "access": "public",
+    "description": null,
+    "lineNumber": 96,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "name": "src/views/Alert.js",
+    "content": "const Computer = require('./Computer');\nconst Phone = require('./Phone');\nconst Terminal = require('./Terminal');\nconst Format = require('../helpers/Format');\nconst Time = require('../helpers/Time');\n\n/**\n * Class for displaying alerts\n * @class Alert\n * @module Alert\n */\nclass Alert {\n  /**\n   * Display alerts\n   * @method display\n   * @param  {Object} timer          Timer object\n   * @param  {Number} displayCounter The display counter used on the alerts\n   */\n  static display(timer, displayCounter) {\n    let terminal = true;\n    let computer = false;\n    let phone = false;\n\n    if (timer.media) {\n      terminal = timer.media.terminal || true;\n      computer = timer.media.computer || false;\n      phone = timer.media.phone || false;\n    }\n\n    // Terminal is default\n    if (terminal) {\n      const time = Time.timeStringFromDate(new Date());\n      const statusMessage = `${time} >>> ${timer.message} >>> ${Format.ordinal(displayCounter)} ${timer.name}`;\n      Terminal.display(timer.bgColor, statusMessage);\n    }\n\n    if (computer) {\n      const computerMessage = `${timer.message}\\n${Format.ordinal(displayCounter)} ${timer.name}`;\n      Computer.display(timer.title, computerMessage);\n    }\n\n    if (phone) {\n      const phoneMessage = `${timer.message}\\n${Format.ordinal(displayCounter)} ${timer.name}`;\n      Phone.display(phoneMessage);\n    }\n  }\n}\n\nmodule.exports = Alert;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/views/Alert.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 106,
+    "kind": "variable",
+    "name": "Computer",
+    "memberof": "src/views/Alert.js",
+    "static": true,
+    "longname": "src/views/Alert.js~Computer",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Alert.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "variable",
+    "name": "Phone",
+    "memberof": "src/views/Alert.js",
+    "static": true,
+    "longname": "src/views/Alert.js~Phone",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Alert.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "variable",
+    "name": "Terminal",
+    "memberof": "src/views/Alert.js",
+    "static": true,
+    "longname": "src/views/Alert.js~Terminal",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Alert.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "variable",
+    "name": "Format",
+    "memberof": "src/views/Alert.js",
+    "static": true,
+    "longname": "src/views/Alert.js~Format",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Alert.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "variable",
+    "name": "Time",
+    "memberof": "src/views/Alert.js",
+    "static": true,
+    "longname": "src/views/Alert.js~Time",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Alert.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 111,
+    "kind": "class",
+    "name": "Alert",
+    "memberof": "src/views/Alert.js",
+    "static": true,
+    "longname": "src/views/Alert.js~Alert",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/views/Alert.js",
+    "importStyle": "Alert",
+    "description": "Class for displaying alerts",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Alert"
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Alert"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 112,
+    "kind": "method",
+    "name": "display",
+    "memberof": "src/views/Alert.js~Alert",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/views/Alert.js~Alert.display",
+    "access": "public",
+    "description": "Display alerts",
+    "lineNumber": 19,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "display"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "timer",
+        "description": "Timer object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "displayCounter",
+        "description": "The display counter used on the alerts"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 113,
+    "kind": "file",
+    "name": "src/views/Computer.js",
+    "content": "const notifier = require('node-notifier');\n\n/**\n * Class for displaying computer alerts\n * @class Computer\n * @module Alert\n */\nclass Computer {\n  /**\n   * Display a computer alert\n   * @method display\n   * @param  {String} title   Title of the alert\n   * @param  {String} message Message of the alert\n   */\n  static display(title, message) {\n    const notifierMessage = {\n      group: title,\n      sound: true,\n      title,\n      message,\n    };\n    notifier.notify(notifierMessage);\n  }\n}\n\nmodule.exports = Computer;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/views/Computer.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 114,
+    "kind": "variable",
+    "name": "notifier",
+    "memberof": "src/views/Computer.js",
+    "static": true,
+    "longname": "src/views/Computer.js~notifier",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Computer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 115,
+    "kind": "class",
+    "name": "Computer",
+    "memberof": "src/views/Computer.js",
+    "static": true,
+    "longname": "src/views/Computer.js~Computer",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/views/Computer.js",
+    "importStyle": "Computer",
+    "description": "Class for displaying computer alerts",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Computer"
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Alert"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "display",
+    "memberof": "src/views/Computer.js~Computer",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/views/Computer.js~Computer.display",
+    "access": "public",
+    "description": "Display a computer alert",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "display"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "title",
+        "description": "Title of the alert"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "Message of the alert"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 117,
+    "kind": "file",
+    "name": "src/views/Phone.js",
+    "content": "/* eslint no-unused-vars: 0 */\nconst env = require('dotenv').config();\nconst request = require('request');\nconst chalk = require('chalk');\nconst qs = require('qs');\nconst Status = require('./Status');\n\n/**\n * Class for displaying phone alerts\n * @class Phone\n * @module Alert\n */\nclass Phone {\n  /**\n   * Display a phone alert (push notification) using \"Push me\" app\n   * @method display\n   * @param  {String} message Message of the alert\n   */\n  static display(message) {\n    if (!process.env.PUSH_ME_TOKEN) {\n      Status.error(chalk.red('ERROR: PUSH_ME_TOKEN is not defined. Mobile notification can\\'t be send.'));\n    } else {\n      const form = {\n        token: process.env.PUSH_ME_TOKEN,\n        title: message,\n      };\n      const formData = qs.stringify(form);\n\n      const requestObj = {\n        headers: {\n          'Content-Length': formData.length,\n          'Content-Type': 'application/x-www-form-urlencoded',\n        },\n        uri: 'https://pushmeapi.jagcesar.se',\n        body: formData,\n        method: 'POST',\n      };\n\n      request(requestObj, (err) => {\n        if (err) {\n          Status.error(err);\n        }\n      });\n    }\n  }\n}\n\nmodule.exports = Phone;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/views/Phone.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 118,
+    "kind": "variable",
+    "name": "env",
+    "memberof": "src/views/Phone.js",
+    "static": true,
+    "longname": "src/views/Phone.js~env",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Phone.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "variable",
+    "name": "request",
+    "memberof": "src/views/Phone.js",
+    "static": true,
+    "longname": "src/views/Phone.js~request",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Phone.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "variable",
+    "name": "chalk",
+    "memberof": "src/views/Phone.js",
+    "static": true,
+    "longname": "src/views/Phone.js~chalk",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Phone.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "variable",
+    "name": "qs",
+    "memberof": "src/views/Phone.js",
+    "static": true,
+    "longname": "src/views/Phone.js~qs",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Phone.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 122,
+    "kind": "variable",
+    "name": "Status",
+    "memberof": "src/views/Phone.js",
+    "static": true,
+    "longname": "src/views/Phone.js~Status",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Phone.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "class",
+    "name": "Phone",
+    "memberof": "src/views/Phone.js",
+    "static": true,
+    "longname": "src/views/Phone.js~Phone",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/views/Phone.js",
+    "importStyle": "Phone",
+    "description": "Class for displaying phone alerts",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Phone"
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Alert"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 124,
+    "kind": "method",
+    "name": "display",
+    "memberof": "src/views/Phone.js~Phone",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/views/Phone.js~Phone.display",
+    "access": "public",
+    "description": "Display a phone alert (push notification) using \"Push me\" app",
+    "lineNumber": 19,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "display"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "Message of the alert"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 125,
+    "kind": "file",
+    "name": "src/views/Status.js",
+    "content": "/* eslint-disable no-console */\n\n/**\n * Class for displaying terminal status\n * @class Status\n * @module Status\n */\nclass Status {\n  /**\n   * Display terminal log\n   * @method show\n   * @param  {Mixed} obj Any type of variable\n   */\n  static log(obj) {\n    console.log(obj);\n  }\n  /**\n   * Display terminal error\n   * @method error\n   * @param  {Mixed} obj Any type of variable\n   */\n  static error(obj) {\n    console.error(obj);\n  }\n}\n\nmodule.exports = Status;\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/views/Status.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 126,
+    "kind": "class",
+    "name": "Status",
+    "memberof": "src/views/Status.js",
+    "static": true,
+    "longname": "src/views/Status.js~Status",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/views/Status.js",
+    "importStyle": "Status",
+    "description": "Class for displaying terminal status",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Status"
+      },
+      {
+        "tagName": "@module",
+        "tagValue": "Status"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 127,
+    "kind": "method",
+    "name": "log",
+    "memberof": "src/views/Status.js~Status",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/views/Status.js~Status.log",
+    "access": "public",
+    "description": "Display terminal log",
+    "lineNumber": 14,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "show"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Mixed"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "Any type of variable"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 128,
+    "kind": "method",
+    "name": "error",
+    "memberof": "src/views/Status.js~Status",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/views/Status.js~Status.error",
+    "access": "public",
+    "description": "Display terminal error",
+    "lineNumber": 22,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "error"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Mixed"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "obj",
+        "description": "Any type of variable"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 129,
+    "kind": "file",
+    "name": "src/views/Terminal.js",
+    "content": "/* eslint-disable no-console */\nconst chalk = require('chalk');\n\n/**\n * Class for displaying terminal alerts\n *\n */\nmodule.exports = class Terminal {\n  /**\n   * Display a terminal alert\n   * @param  {string} color Background color from 'chalk'\n   * @param  {string} message Message of the alert\n   * @example\n   * Terminal.display('bgGreen', \"This is my terminal message\");\n   */\n  static display(color, message) {\n    console.log(chalk[color](`${message}`));\n  }\n};\n",
+    "static": true,
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/src/views/Terminal.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 130,
+    "kind": "variable",
+    "name": "chalk",
+    "memberof": "src/views/Terminal.js",
+    "static": true,
+    "longname": "src/views/Terminal.js~chalk",
+    "access": "public",
+    "export": false,
+    "importPath": "smoke-and-the-water/src/views/Terminal.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 131,
+    "kind": "class",
+    "name": "Terminal",
+    "memberof": "src/views/Terminal.js",
+    "static": true,
+    "longname": "src/views/Terminal.js~Terminal",
+    "access": "public",
+    "export": true,
+    "importPath": "smoke-and-the-water/src/views/Terminal.js",
+    "importStyle": "Terminal",
+    "description": "Class for displaying terminal alerts",
+    "lineNumber": 8,
+    "interface": false
+  },
+  {
+    "__docId__": 132,
+    "kind": "method",
+    "name": "display",
+    "memberof": "src/views/Terminal.js~Terminal",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/views/Terminal.js~Terminal.display",
+    "access": "public",
+    "description": "Display a terminal alert",
+    "examples": [
+      "Terminal.display('bgGreen', \"This is my terminal message\");"
+    ],
+    "lineNumber": 16,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "color",
+        "description": "Background color from 'chalk'"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "message",
+        "description": "Message of the alert"
+      }
+    ],
+    "return": null
+  },
+  {
+    "kind": "index",
+    "content": "![](https://github.com/russoedu/smoke-and-the-water/blob/master/README/smoke-and-the-water.jpg?raw=true)\n\nSmoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water.\n\nSure you can use it to remember daily stuff… but it was created for my own health needs 😬.\n\n## Configuration\n\n### Default configuration\n\nThe default configuration can be changed but can't be removed from the timers folder.\n\nThe **default configurations are used only when a configuration is not set**. For instance, you can set a single \"endTime\" for all your timers in the default.json and all timers will use this config. If you have a timer that needs a different \"endTime\", this configuration will overwrite the default.\n\n## Configuring your timers\n\nConfigure or edit the other timers located in the timers folder.\n\n```json\n{\n  \"title\": \"Remember\",\n  \"message\": \"🍰 The cake is a lie\",\n  \"name\": \"lie remembered\",\n  \"endTime\": \"23:30\",\n  \"bgColor\": \"bgYellow\",\n  \"quantity\": 5,\n  \"reminders\": [\n    \"00:30:00\",\n    \"00:45:00\",\n    \"01:00:00\"\n  ],\n  \"media\": {\n    \"terminal\": true,\n    \"computer\": true,\n    \"phone\": true\n  },\n}\n```\nYou should set:\n\n| Option        | Usage |\n| :------------ | :------------- |\n| **title**     | used in the desktop alert |\n| **message**   | message for the alert used in all versions |\n| **name**      | the name used to show how many times you did that timer |\n| **endTime**   | when you want your timer to give the last alert in the day |\n| **bgColor**   | terminal background color |\n| **quantity**  | the number of times you want this to be repeated |\n| **reminders** | list with the repeat timers in \"hh:mm:ss\" format. If you have less timers than the number you set in `quantity`, the rest of the reminders will be distributed until the `endTime`. The time must use `hh:mm:ss` format. |\n| **media**     | object to define where the alerts should be displayed. **If none is set**, not even in the default `.json`, **only terminal alert will be displayed**. |\n\n## Mobile push\nTo use the mobile push you need to install the app [Push Me](http://pushme.jagcesar.se) and get your key. In the app, click on the key to copy to the clipboard.\n\nThen you need to copy or rename the `.env.example` file to `.env` and insert your key.\n\n\n## Usage\n\nFirst, install all nee packages with `npm install`.\n\nThen, create your timers (timers folder).\n\nFinaly, run `npm start` and the app will run, alerting you in the computer and on your phone.\n\n## Example\n### Desktop alert\n![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/alert.png?raw=true)\n### Mobile push\n![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/mobile.png?raw=true)\n### Terminal message\n![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/terminal.png?raw=true)\n\n## TODO\n\n### Working on…\n\n- New `reminders` options to make it easier to crate your time table:\n - \"in\": \"Time after the beginning\"\n - \"after\": \"Time after the previous\"\n - \"at\": \"On an exact time of the day\"\n\n```\n\"reminders\": {\n  \"Do something fun\": {\n    \"in\": \"00:00:00\"\n  },\n  \"Read news\": {\n    \"in\": \"00:30:00\"\n  },\n  \"Go brush your teeth and your hair!\": {\n    \"in\": \"01:00:00\"\n  },\n  \"Go to work\": {\n    \"after\": \"00:05:00\"\n  },\n  \"Check Trello\": {\n    \"after\": \"01:00:00\"\n  },\n  \"Work\": {\n    \"after\": \"00:15:00\"\n  },\n  \"Do something fun!!!\": {\n    \"after\": \"03:45:00\"\n  },\n  \"Prepare dinner\": {\n    \"at\": \"18:00:00\"\n  }\n```\n\n- Possibility to disable alert on some days:\n- \n```\n\"enable\": [\n  \"weekdays\",\n  \"weekends\",\n  \"sun\",\n  \"mon\",\n  \"tue\",\n  \"wed\",\n  \"thu\",\n  \"fri\",\n  \"sat\",\n  0, 1, 2, 3, 4, 5, 6, 7\n]\n```\n\n\n### Mandatory\n\n- ~~Calculate the remaining alerts.~~\n- ~~Finish execution after all timers finish.~~\n- Check if all needed config are filled or have default values.\n- ~~Make sure `quantity` is smaller than the length of `reminders`.~~\n- Create tests.\n- ~~Look for performance issues.~~\n\n### Nice to have\n\n- Create better CLI interface\n- Create config wizard\n- Let user define the first alert instead of setting when the app starts\n- Set individual messages for each timer (change `reminders` from an array to an object)\n\n### Maybe in the future…\n\n- Create Electron app\n",
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"smoke-and-the-water\",\n  \"version\": \"1.6.7\",\n  \"description\": \"simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"start\": \"node ./src/index.js\",\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/russoedu/smoke-and-the-water.git\"\n  },\n  \"keywords\": [\n    \"timer\",\n    \"health\",\n    \"cigarette\",\n    \"water\",\n    \"coffee\"\n  ],\n  \"bugs\": {\n    \"url\": \"https://github.com/russoedu/smoke-and-the-water/issues\"\n  },\n  \"homepage\": \"https://github.com/russoedu/smoke-and-the-water#readme\",\n  \"author\": {\n    \"name\": \"Eduardo Russo\",\n    \"email\": \"russoedu@gmail.com\"\n  },\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"chalk\": \"^2.0.1\",\n    \"dotenv\": \"^4.0.0\",\n    \"elapsy\": \"^1.1.0\",\n    \"node-notifier\": \"^5.1.2\",\n    \"qs\": \"^6.5.0\",\n    \"request\": \"^2.81.0\"\n  },\n  \"devDependencies\": {\n    \"babel-core\": \"^6.25.0\",\n    \"debug\": \"^2.6.8\",\n    \"esdoc\": \"^1.0.1\",\n    \"esdoc-node\": \"^1.0.2\",\n    \"esdoc-node-plugin\": \"^0.2.1\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.3.0\",\n    \"eslint-config-airbnb\": \"^15.1.0\",\n    \"eslint-config-airbnb-base\": \"^11.3.1\",\n    \"eslint-plugin-import\": \"^2.7.0\"\n  }\n}\n",
+    "longname": "/Users/edu/Dropbox/Duda/Sites/smoke-and-the-water/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

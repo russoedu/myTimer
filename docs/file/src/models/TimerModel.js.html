@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/models/TimerModel.js | Smoke and the Water</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="Smoke and the Water"><meta property="twitter:description" content="simple recurrent timer to help you to control how many cigarettes you &#x1F6AC; smoke, how many &#x2615;&#xFE0F; coffee you drink and help you to remember you to drink pure clean &#x1F6B0; water"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.png" style="width:34px;"></a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/russoedu/smoke-and-the-water"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#controllers">controllers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/controllers/Timer.js~Timer.html">Timer</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#helpers">helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/helpers/Format.js~Format.html">Format</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/helpers/Time.js~Time.html">Time</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#models">models</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/DefaultTimerModel.js~DefaultTimerModel.html">DefaultTimerModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/ReminderModel.js~RemindeModel.html">RemindeModel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/models/TimerModel.js~TimerModel.html">TimerModel</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#views">views</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Alert.js~Alert.html">Alert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Computer.js~Computer.html">Computer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Phone.js~Phone.html">Phone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Status.js~Status.html">Status</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/views/Terminal.js~Terminal.html">Terminal</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/models/TimerModel.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const fs = require(&apos;fs&apos;);
+const path = require(&apos;path&apos;);
+const debug = require(&apos;debug&apos;)(&apos;TimerModel&apos;);
+const Time = require(&apos;../helpers/Time&apos;);
+const Status = require(&apos;../views/Status&apos;);
+const DefaultTimerModel = require(&apos;../models/DefaultTimerModel&apos;);
+
+/**
+ * Fill the reminder table with the correct times according to the timer
+ * &apos;reminders&apos; and &apos;endTime&apos;. The timetable is filled in the Class object on
+ * &apos;this.timer.reminders&apos;
+ * @private
+ */
+function setReminderTable() {
+  const reminders = [];
+  const time = new Time();
+  const now = time.getStart();
+
+  // Quantity is set and the quantity of reminders is less than or equal
+  // the quantity (or no reminder was set)
+  Status.log(`Reminders for ${this.fileName}`);
+  if (!!this.quantity &amp;&amp; (!this.reminders || this.reminders.length &lt;= this.quantity)) {
+    debug(&apos;setReminderTable&apos;, this.fileName, &apos;case 1&apos;);
+    // Create an empty reminders array if none was set
+    if (!this.reminders) {
+      this.reminders = [];
+    }
+
+    const left = this.quantity - this.reminders.length - 1;
+    this.reminders = Time.fillReminder(left, now, this.endTime, this.reminders, true);
+  } else if (!this.quantity &amp;&amp; !!this.reminders &amp;&amp; this.reminders.length &gt; 0) {
+    debug(&apos;setReminderTable&apos;, this.fileName, &apos;case 2&apos;);
+    const quantity = this.reminders.length - 1;
+    this.reminders = Time.fillReminder(quantity, now, this.endTime, this.reminders, true);
+  } else {
+    debug(&apos;setReminderTable&apos;, this.fileName, &apos;case 3 - error&apos;);
+    const message = `Error on ${this.fileName} configuration. Please be sure that &quot;quantity&quot; is smaller or equal the length of &quot;reminders&quot;.`;
+    Status.error(`ERROR: ${message}`);
+  }
+  Object.assign(this, reminders, this);
+}
+
+
+/**
+ * TimerModel class sets all needed data for a timer controller to run
+ * @example
+ * new TimerModel(file)
+ *   .then(timer =&gt; {
+ *     console.log(timer);
+ *   });
+ * // The TimerModel object
+ * TimerModel {
+ *  fileName: &apos;water&apos;,
+ *  title: &apos;Water time&apos;,
+ *  message: &apos;&#x1F6B0;  Drink a glass of water!&apos;,
+ *  name: &apos;glass&apos;,
+ *  endTime: &apos;22:00:00&apos;,
+ *  bgColor: &apos;bgBlue&apos;,
+ *  quantity: 4,
+ *  media: {
+ *    terminal: false,
+ *    computer: false,
+ *    phone: true
+ *  },
+ *  reminders: [
+ *    &apos;00:25:24&apos;,
+ *    &apos;00:25:24&apos;,
+ *    &apos;00:25:24&apos;
+ *  ]
+ * }
+ *
+ *
+ */
+class TimerModel {
+  /**
+   * Create a TimerModel object from a JSON, set it&apos;s file name and merge with the default timer.
+   * Ignores &apos;default.json&apos; and fileNames that&apos;s not a JSON (by it&apos;s extention).
+   * @param  {String}    fileName Name of the timer JSON
+   * @return {Promise&lt;TimerModel|Error&gt;} TimerModel object with all data on the JSON, plus it&apos;s
+   * name and data merged from the default timer
+   */
+  constructor(fileName) {
+    debug(&apos;constructor&apos;, fileName);
+    return new Promise((resolve, reject) =&gt; {
+      if (fileName === &apos;default.json&apos; || path.extname(fileName) !== &apos;.json&apos;) {
+        reject(null);
+      } else {
+        const timersFolder = &apos;./timers/&apos;;
+        const filePath = path.join(timersFolder, fileName);
+
+        fs.readFile(filePath, &apos;utf8&apos;, (err, data) =&gt; {
+          if (err) {
+            reject(err);
+          } else {
+            // Set the file name
+            this.fileName = path.basename(fileName, &apos;.json&apos;);
+
+            // Create the object
+
+            // Fill with the default
+            const defaultTimer = new DefaultTimerModel();
+            const timer = defaultTimer.merge(JSON.parse(data));
+            Object.assign(this, timer, this);
+            debug(&apos;before setReminders table&apos;, this);
+            setReminderTable.bind(this)();
+            resolve(this);
+          }
+        });
+      }
+    });
+  }
+}
+
+module.exports = TimerModel;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.1)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

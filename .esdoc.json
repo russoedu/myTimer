@@ -1,0 +1,25 @@
+{
+  "source": "./src",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-node-plugin",
+      "option": {
+        "base": ".",
+        "devDependencies": false
+      }
+    },
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "brand": {
+          "title": "Smoke and the Water",
+          "logo": "./README/smoke-and-the-water.jpg"
+        }
+      }
+    },
+    {
+      "name": "esdoc-node"
+    }
+  ]
+}

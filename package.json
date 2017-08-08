@@ -4,7 +4,7 @@
   "description": "simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,11 +38,13 @@
   "devDependencies": {
     "babel-core": "^6.25.0",
     "debug": "^2.6.8",
+    "esdoc": "^1.0.1",
+    "esdoc-node": "^1.0.2",
+    "esdoc-node-plugin": "^0.2.1",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsdoc": "^3.1.1",
-    "jsdoc": "^3.5.3"
+    "eslint-plugin-import": "^2.7.0"
   }
 }

@@ -1,4 +1,4 @@
-![](./README/smoke-and-the-water.jpg)
+![](https://github.com/russoedu/smoke-and-the-water/blob/master/README/smoke-and-the-water.jpg?raw=true)
 
 Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water.
 
@@ -65,11 +65,11 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 
 ## Example
 ### Desktop alert
-![Alert example](./README/alert.png)
+![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/alert.png?raw=true)
 ### Mobile push
-![Alert example](./README/mobile.png)
+![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/mobile.png?raw=true)
 ### Terminal message
-![Alert example](./README/terminal.png)
+![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/terminal.png?raw=true)
 
 ## TODO
 

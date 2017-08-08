@@ -3,5 +3,6 @@
   "message": "🚰  Drink a glass of water!",
   "name": "glass",
   "bgColor": "bgBlue",
-  "quantity": 30
+  "endTime": "22:00:00",
+  "quantity": 27
 }
