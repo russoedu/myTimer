@@ -1,5 +1,8 @@
 ![](https://github.com/russoedu/smoke-and-the-water/blob/master/README/smoke-and-the-water.jpg?raw=true)
 
+[![dependencies Status](https://david-dm.org/russoedu/smoke-and-the-water/status.svg)](https://david-dm.org/russoedu/smoke-and-the-water)
+[![devDependencies Status](https://david-dm.org/russoedu/smoke-and-the-water/dev-status.svg)](https://david-dm.org/russoedu/smoke-and-the-water?type=dev)
+
 Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water.
 
 Sure you can use it to remember daily stuff… but it was created for my own health needs 😬.

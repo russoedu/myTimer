@@ -2,13 +2,10 @@
 
 /**
  * Class for displaying terminal status
- * @class Status
- * @module Status
  */
 class Status {
   /**
    * Display terminal log
-   * @method show
    * @param  {Mixed} obj Any type of variable
    */
   static log(obj) {
