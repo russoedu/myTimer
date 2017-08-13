@@ -1,7 +1,6 @@
 const Alert = require('../views/Alert');
-// const Status = require('../views/Status');
+const debug = require('debug')('Timer');
 const Time = require('../helpers/Time');
-// const DefaultTimerModel = require('../models/DefaultTimerModel');
 
 /**
  * Run the reminders of a TimerModel object
@@ -35,10 +34,10 @@ class Timer {
    * @param  {Number} [counter = 0] The number of the iteration
    */
   start(counter = 0) {
-    Alert.display(this.timer, counter + 1);
-
     if (counter < this.timer.reminders.length) {
       setTimeout(() => {
+        debug(this.timer.fileName, counter + 1);
+        Alert.display(this.timer, counter + 1);
         this.start(counter + 1);
       }, Time.milisecondsFromString(this.timer.reminders[counter]));
     }

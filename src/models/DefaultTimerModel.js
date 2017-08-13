@@ -1,5 +1,7 @@
 const fs = require('fs');
+const chalk = require('chalk');
 const path = require('path');
+const debug = require('debug')('DefaultTimerModel');
 
 let instance = null;
 
@@ -23,7 +25,7 @@ class DefaultTimerModel {
     const defaultPath = path.join(timersFolder, 'default.json');
     const defaultTimer = JSON.parse(fs.readFileSync(defaultPath), 'utf8');
 
-    this.defaultTimer = defaultTimer;
+    this.timer = defaultTimer;
 
     return instance;
   }
@@ -37,7 +39,23 @@ class DefaultTimerModel {
    */
   merge(timer) {
     const timerConfig = {};
-    Object.assign(timerConfig, this.defaultTimer, timer);
+    debug(chalk.bgCyan('>>>> merge <<<<'));
+    debug(this.timer);
+    debug(chalk.bgCyan('>>>> with <<<<'));
+    debug(timer);
+    Object.assign(timerConfig, this.timer, timer);
+
+    // Remove alert on computer and phone if debug is enabled
+    if (debug.enabled) {
+      debug('debug enabled, set media to terminal only');
+      timerConfig.media = {
+        terminal: true,
+        computer: false,
+        phone: false,
+      };
+    }
+    debug(chalk.bgCyan('>>>> result <<<<'));
+    debug(timerConfig);
     return timerConfig;
   }
 }

@@ -151,7 +151,7 @@ class Time {
       const start = time;
       time = Time.add(time, increment);
       debug('start:', start, 'increment:', increment, 'result:', time);
-      if (log) {
+      if (log && !debug.enabled) {
         const ordinal = Format.fixedLength(Format.ordinal(counter), 5);
         Status.log(`${ordinal}: ${start} (next on ${increment})`);
         counter += 1;
@@ -173,11 +173,13 @@ class Time {
    * @return {Array} The full filled time table (reminders) array
    */
   static fillReminder(quantity, startTime, endTime, reminders, log) {
+    // TODO fix to use cron
+    debug(quantity, startTime, endTime);
     const time = Time.getFinal(startTime, reminders, log);
     const diff = Time.diffFromString(time, endTime);
     const averageTime = diff / quantity;
     const averageTimeString = Time.stringFromMiliseconds(averageTime);
-    if (log) {
+    if (log && !debug.enabled) {
       const ordinal = Format.fixedLength(Format.ordinal(quantity + 1), 5);
       Time.getFinal(time, new Array(quantity).fill(averageTimeString), log);
       Status.log(`${ordinal}: ${endTime} (last one)`);

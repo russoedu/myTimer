@@ -4,7 +4,7 @@ const debug = require('debug')('TimerModel');
 const Time = require('../helpers/Time');
 const Status = require('../views/Status');
 const DefaultTimerModel = require('../models/DefaultTimerModel');
-
+const chalk = require('chalk');
 /**
  * Fill the reminder table with the correct times according to the timer
  * 'reminders' and 'endTime'. The timetable is filled in the Class object on
@@ -12,32 +12,34 @@ const DefaultTimerModel = require('../models/DefaultTimerModel');
  * @private
  */
 function setReminderTable() {
-  const reminders = [];
   const time = new Time();
   const now = time.getStart();
 
   // Quantity is set and the quantity of reminders is less than or equal
   // the quantity (or no reminder was set)
-  Status.log(`Reminders for ${this.fileName}`);
-  if (!!this.quantity && (!this.reminders || this.reminders.length <= this.quantity)) {
-    debug('setReminderTable', this.fileName, 'case 1');
+  if (!debug.enabled) {
+    Status.log(`Reminders for ${this.fileName}`);
+  }
+  const quantity = !this.quantity ? 0 : this.quantity;
+  debug(chalk.bgBlue(this.fileName, 'quantity', quantity));
+  // TODO fix in case the reminders set are after the endTime
+  if (quantity > 0 || (!!this.reminders && this.reminders.length > 0)) {
     // Create an empty reminders array if none was set
     if (!this.reminders) {
-      this.reminders = [];
+      this.reminders = ['00:00:00'];
     }
-
-    const left = this.quantity - this.reminders.length - 1;
+    const left = quantity - this.reminders.length;
+    debug(chalk.bgBlue(this.fileName, 'left', left));
     this.reminders = Time.fillReminder(left, now, this.endTime, this.reminders, true);
-  } else if (!this.quantity && !!this.reminders && this.reminders.length > 0) {
-    debug('setReminderTable', this.fileName, 'case 2');
-    const quantity = this.reminders.length - 1;
-    this.reminders = Time.fillReminder(quantity, now, this.endTime, this.reminders, true);
+  // } else if (!this.quantity && !!this.reminders && this.reminders.length > 0) {
+  //   debug('setReminderTable', this.fileName, 'case 2');
+  //   const quantity = this.reminders.length - 1;
+  //   this.reminders = Time.fillReminder(quantity, now, this.endTime, this.reminders, true);
   } else {
-    debug('setReminderTable', this.fileName, 'case 3 - error');
+    debug(chalk.bgRed('setReminderTable', this.fileName, ' - error'));
     const message = `Error on ${this.fileName} configuration. Please be sure that "quantity" is smaller or equal the length of "reminders".`;
     Status.error(`ERROR: ${message}`);
   }
-  Object.assign(this, reminders, this);
 }
 
 
@@ -80,29 +82,34 @@ class TimerModel {
    * name and data merged from the default timer
    */
   constructor(fileName) {
-    debug('constructor', fileName);
+    debug(chalk.bgBlue('constructor', fileName));
     return new Promise((resolve, reject) => {
       if (fileName === 'default.json' || path.extname(fileName) !== '.json') {
+        debug(chalk.bgBlue(fileName, 'rejected'));
         reject(null);
       } else {
+        debug(chalk.bgBlue(fileName, 'accepted'));
         const timersFolder = './timers/';
         const filePath = path.join(timersFolder, fileName);
 
         fs.readFile(filePath, 'utf8', (err, data) => {
           if (err) {
+            debug(chalk.bgRed(fileName, 'error'));
             reject(err);
           } else {
             // Set the file name
             this.fileName = path.basename(fileName, '.json');
 
-            // Create the object
-
-            // Fill with the default
+            // Merge the timer from the JSON with the default timer
             const defaultTimer = new DefaultTimerModel();
             const timer = defaultTimer.merge(JSON.parse(data));
+
+            // Set this object with the merged timer
             Object.assign(this, timer, this);
-            debug('before setReminders table', this);
+
+            // Create the reminder table
             setReminderTable.bind(this)();
+            debug(this);
             resolve(this);
           }
         });
