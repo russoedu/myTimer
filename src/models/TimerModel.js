@@ -17,11 +17,7 @@ function setReminderTable() {
 
   // Quantity is set and the quantity of reminders is less than or equal
   // the quantity (or no reminder was set)
-  if (!debug.enabled) {
-    Status.log(`Reminders for ${this.fileName}`);
-  }
   const quantity = !this.quantity ? 0 : this.quantity;
-  debug(chalk.bgBlue(this.fileName, 'quantity', quantity));
   // TODO fix in case the reminders set are after the endTime
   if (quantity > 0 || (!!this.reminders && this.reminders.length > 0)) {
     // Create an empty reminders array if none was set
@@ -29,12 +25,10 @@ function setReminderTable() {
       this.reminders = ['00:00:00'];
     }
     const left = quantity - this.reminders.length;
-    debug(chalk.bgBlue(this.fileName, 'left', left));
-    this.reminders = Time.fillReminder(left, now, this.endTime, this.reminders, true);
-  // } else if (!this.quantity && !!this.reminders && this.reminders.length > 0) {
-  //   debug('setReminderTable', this.fileName, 'case 2');
-  //   const quantity = this.reminders.length - 1;
-  //   this.reminders = Time.fillReminder(quantity, now, this.endTime, this.reminders, true);
+    debug(chalk.bgBlue(this.fileName, 'quantity: ', quantity));
+    debug(chalk.bgBlue(this.fileName, 'reminders:', this.reminders.length));
+    debug(chalk.bgBlue(this.fileName, 'left:     ', left));
+    this.reminders = Time.fillReminder(left, now, this.endTime, this.reminders);
   } else {
     debug(chalk.bgRed('setReminderTable', this.fileName, ' - error'));
     const message = `Error on ${this.fileName} configuration. Please be sure that "quantity" is smaller or equal the length of "reminders".`;
@@ -89,7 +83,7 @@ class TimerModel {
         reject(null);
       } else {
         debug(chalk.bgBlue(fileName, 'accepted'));
-        const timersFolder = './timers/';
+        const timersFolder = debug.enabled ? './timers-debug' : './timers';
         const filePath = path.join(timersFolder, fileName);
 
         fs.readFile(filePath, 'utf8', (err, data) => {

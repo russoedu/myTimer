@@ -1,6 +1,5 @@
 const debug = require('debug')('Time');
-const Status = require('../views/Status');
-const Format = require('../helpers/Format');
+const chalk = require('chalk');
 
 let instance = null;
 
@@ -144,18 +143,11 @@ class Time {
    * @param  {Boolean} log           If the log with the alerts should be displayed
    * @return {String} The fnal time formated as hh:mm:ss
    */
-  static getFinal(startTime, incrementArray, log) {
+  static getFinal(startTime, incrementArray) {
     let time = startTime;
-    let counter = 1;
+    debug(incrementArray);
     incrementArray.forEach((increment) => {
-      const start = time;
       time = Time.add(time, increment);
-      debug('start:', start, 'increment:', increment, 'result:', time);
-      if (log && !debug.enabled) {
-        const ordinal = Format.fixedLength(Format.ordinal(counter), 5);
-        Status.log(`${ordinal}: ${start} (next on ${increment})`);
-        counter += 1;
-      }
     });
     return time;
   }
@@ -165,27 +157,28 @@ class Time {
    * the available time. Fill the orignal reminders and return the full time
    * table array
    * @method fillReminder
-   * @param  {Number}   quantity  How many alerts should be set
+   * @param  {Number}   remindersToFill  How many alerts should be set
    * @param  {String}   startTime      The start time formated in as hh:mm:ss
    * @param  {String}   endTime   The end time in the format hh:mm:ss
    * @param  {Array}    reminders The reminders array
    * @param  {Boolean} log           If the log with the alerts should be displayed
    * @return {Array} The full filled time table (reminders) array
    */
-  static fillReminder(quantity, startTime, endTime, reminders, log) {
+  static fillReminder(remindersToFill, startTime, endTime, reminders) {
     // TODO fix to use cron
-    debug(quantity, startTime, endTime);
-    const time = Time.getFinal(startTime, reminders, log);
+    debug(chalk.bgMagenta('remindersToFill: ', remindersToFill));
+    debug(chalk.bgMagenta('reminders:       ', reminders.length));
+    debug(chalk.bgMagenta('startTime:       ', startTime));
+    debug(chalk.bgMagenta('endTime:         ', endTime));
+    const time = Time.getFinal(startTime, reminders);
+
+    debug(chalk.bgMagenta('time:            ', time));
     const diff = Time.diffFromString(time, endTime);
-    const averageTime = diff / quantity;
+    const averageTime = diff / remindersToFill;
     const averageTimeString = Time.stringFromMiliseconds(averageTime);
-    if (log && !debug.enabled) {
-      const ordinal = Format.fixedLength(Format.ordinal(quantity + 1), 5);
-      Time.getFinal(time, new Array(quantity).fill(averageTimeString), log);
-      Status.log(`${ordinal}: ${endTime} (last one)`);
-    }
+
     debug('start:', time, 'end:', endTime, 'diff:', averageTimeString);
-    const filled = new Array(quantity).fill(averageTimeString);
+    const filled = new Array(remindersToFill).fill(averageTimeString);
     return reminders.concat(filled);
   }
 }

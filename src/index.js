@@ -13,7 +13,8 @@ debug(chalk.black.bgYellow('start: ', time.getStart()));
 /**
  * Initiate the process, reading each JSON in 'timers' folder
  */
-fs.readdirSync('./timers/')
+const folder = debug.enabled ? './timers-debug' : './timers';
+fs.readdirSync(folder)
   .forEach((file) => {
     debug(chalk.black.bgYellow('reading ', file));
     new TimerModel(file)

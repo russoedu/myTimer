@@ -21,7 +21,7 @@ class DefaultTimerModel {
     if (!instance) {
       instance = this;
     }
-    const timersFolder = './timers/';
+    const timersFolder = debug.enabled ? './timers-debug' : './timers';
     const defaultPath = path.join(timersFolder, 'default.json');
     const defaultTimer = JSON.parse(fs.readFileSync(defaultPath), 'utf8');
 

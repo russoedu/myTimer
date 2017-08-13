@@ -1,0 +1,13 @@
+{
+  "title": "Remember",
+  "message": "🍰 The cake is a lie",
+  "name": "lie remembered",
+  "endTime": "11:35:00",
+  "bgColor": "bgYellow",
+  "quantity": 3,
+  "media": {
+    "terminal": true,
+    "computer": true,
+    "phone": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Daily Tasks",
+  "name": "task",
+  "bgColor": "bgRed",
+  "disable": [
+    "weekdays",
+    "weekends",
+    "sun",
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    0, 1, 2, 3, 4, 5, 6
+  ],
+  "enable": [
+    "weekdays",
+    "weekends",
+    "everyday",
+    "sun",
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    0, 1, 2, 3, 4, 5, 6
+  ],
+  "Improve possibilities on timer def": {
+    "fromBegining": "Time from the beginning",
+    "after": "Time after the previous, so, it's position matter",
+    "at": "On an exact time of the day (24:00)"
+  },
+  "reminders": [
+    ["at", "18:00:00", "Prepare dinner"],
+    ["fromBegining", "00:00:00", "Do something fun"],
+    ["after", "00:30:00", "Read news"],
+    ["fromBegining", "01:00:00", "Brush teeth and hair"],
+    ["fromBegining", "01:05:00", "Search for jobs"],
+    ["after", "01:00:00", "Check Trello"],
+    ["after", "00:15:00", "Work"],
+    ["after", "03:45:00", "Do something fun"]
+  ]
+}
