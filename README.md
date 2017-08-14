@@ -19,6 +19,21 @@ The **default configurations are used only when a configuration is not set**. Fo
 
 Configure or edit the other timers located in the timers folder.
 
+You should set:
+
+| Option        | Type       | Usage          |
+| :------------ | :--------- | :------------- |
+| **title**     | String | used in the desktop alert |
+| **message**   | String | message for the alert used in all versions |
+| **name**      | String | the name used to show how many times you did that timer |
+| **endTime**   | String | when you want your timer to give the last alert in the day |
+| **bgColor**   | String | terminal background color |
+| **quantity**  | Number | the number of times you want this to be repeated |
+| **reminders** | Array  | list with the repeat timers in "hh:mm:ss" format. If you have less timers than the number you set in `quantity`, the rest of the reminders will be distributed until the `endTime`. The time must use `hh:mm:ss` format. |
+| **media**     | Object | object to define where the alerts should be displayed. **If none is set**, not even in the default `.json`, **only terminal alert will be displayed**. |
+
+Example:
+
 ```json
 {
   "title": "Remember",
@@ -26,7 +41,7 @@ Configure or edit the other timers located in the timers folder.
   "name": "lie remembered",
   "endTime": "23:30",
   "bgColor": "bgYellow",
-  "quantity": 5,
+  "quantity": 15,
   "reminders": [
     "00:30:00",
     "00:45:00",
@@ -39,18 +54,6 @@ Configure or edit the other timers located in the timers folder.
   },
 }
 ```
-You should set:
-
-| Option        | Usage |
-| :------------ | :------------- |
-| **title**     | used in the desktop alert |
-| **message**   | message for the alert used in all versions |
-| **name**      | the name used to show how many times you did that timer |
-| **endTime**   | when you want your timer to give the last alert in the day |
-| **bgColor**   | terminal background color |
-| **quantity**  | the number of times you want this to be repeated |
-| **reminders** | list with the repeat timers in "hh:mm:ss" format. If you have less timers than the number you set in `quantity`, the rest of the reminders will be distributed until the `endTime`. The time must use `hh:mm:ss` format. |
-| **media**     | object to define where the alerts should be displayed. **If none is set**, not even in the default `.json`, **only terminal alert will be displayed**. |
 
 ## Mobile push
 To use the mobile push you need to install the app [Push Me](http://pushme.jagcesar.se) and get your key. In the app, click on the key to copy to the clipboard.
@@ -60,9 +63,9 @@ Then you need to copy or rename the `.env.example` file to `.env` and insert you
 
 ## Usage
 
-First, install all nee packages with `npm install`.
+First, install all needed packages with `npm install --only=production` (to install only production dependencies) or `npm install` (that will also install development dependencies).
 
-Then, create your timers (timers folder).
+Then, update the existing timers or create your own (JSON files in ./timers folder).
 
 Finaly, run `npm start` and the app will run, alerting you in the computer and on your phone.
 
@@ -76,43 +79,41 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 
 ## TODO
 
-### Working on…
+### Mandatory
+- Create tests.
+- Check if all needed config are filled or have default values.
+- ~~Replace setTimeout for cron~~
+- ~~Calculate the remaining alerts.~~
+- ~~Finish execution after all timers finish.~~
+- ~~Make sure `quantity` is smaller than the length of `reminders`.~~
+- ~~Look for performance issues.~~
+- ~~Let user define the first alert instead of setting when the app starts~~
 
-- New `reminders` options to make it easier to crate your time table:
- - "in": "Time after the beginning"
- - "after": "Time after the previous"
- - "at": "On an exact time of the day"
+### Nice to have
+
+- Create better CLI interface
+- Create config wizard
+- Set individual messages for each timer (change `reminders` from an array to an object)
+	- New `reminders` options to make it easier to crate your time table:
+	 - "fromBegining": "Time from the beginning"
+	 - "after": "Time after the previous, so, it's position matter"
+	 - "at": "On an exact time of the day (24:00)"
 
 ```
-"reminders": {
-  "Do something fun": {
-    "in": "00:00:00"
-  },
-  "Read news": {
-    "in": "00:30:00"
-  },
-  "Go brush your teeth and your hair!": {
-    "in": "01:00:00"
-  },
-  "Go to work": {
-    "after": "00:05:00"
-  },
-  "Check Trello": {
-    "after": "01:00:00"
-  },
-  "Work": {
-    "after": "00:15:00"
-  },
-  "Do something fun!!!": {
-    "after": "03:45:00"
-  },
-  "Prepare dinner": {
-    "at": "18:00:00"
-  }
+"reminders": [
+    ["at", "18:00:00", "Prepare dinner"],
+    ["fromBegining", "00:00:00", "Do something fun"],
+    ["after", "00:30:00", "Read news"],
+    ["fromBegining", "01:00:00", "Brush teeth and hair"],
+    ["fromBegining", "01:05:00", "Search for jobs"],
+    ["after", "01:00:00", "Check Trello"],
+    ["after", "00:15:00", "Work"],
+    ["after", "03:45:00", "Do something fun"]
+  ]
 ```
 
 - Possibility to disable alert on some days:
-- 
+
 ```
 "enable": [
   "weekdays",
@@ -129,22 +130,7 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 ```
 
 
-### Mandatory
-
-- ~~Calculate the remaining alerts.~~
-- ~~Finish execution after all timers finish.~~
-- Check if all needed config are filled or have default values.
-- ~~Make sure `quantity` is smaller than the length of `reminders`.~~
-- Create tests.
-- ~~Look for performance issues.~~
-
-### Nice to have
-
-- Create better CLI interface
-- Create config wizard
-- Let user define the first alert instead of setting when the app starts
-- Set individual messages for each timer (change `reminders` from an array to an object)
-
 ### Maybe in the future…
 
 - Create Electron app
+- Create Ionic app

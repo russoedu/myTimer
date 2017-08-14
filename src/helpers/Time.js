@@ -1,5 +1,4 @@
 const debug = require('debug')('Time');
-const chalk = require('chalk');
 
 let instance = null;
 
@@ -63,7 +62,10 @@ class Time {
    * @return {String} The time formated as hh:mm:ss
    */
   static timeStringFromDate(date) {
-    return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
   }
 
   /**
@@ -99,6 +101,15 @@ class Time {
     return endTime.getTime() - strTime.getTime();
   }
 
+  static stringToCron(time) {
+    const spl = time.split(':');
+    return `${spl[2]} ${spl[1]} ${spl[0]} * * *`;
+  }
+
+  static cronToString(time) {
+    const spl = time.split(' ');
+    return `${spl[2]}:${spl[1]}:${spl[0]}`;
+  }
   /**
    * Summ the time from two time strings
    * @method diffFromString
@@ -145,7 +156,6 @@ class Time {
    */
   static getFinal(startTime, incrementArray) {
     let time = startTime;
-    debug(incrementArray);
     incrementArray.forEach((increment) => {
       time = Time.add(time, increment);
     });
@@ -164,20 +174,20 @@ class Time {
    * @param  {Boolean} log           If the log with the alerts should be displayed
    * @return {Array} The full filled time table (reminders) array
    */
-  static fillReminder(remindersToFill, startTime, endTime, reminders) {
-    // TODO fix to use cron
-    debug(chalk.bgMagenta('remindersToFill: ', remindersToFill));
-    debug(chalk.bgMagenta('reminders:       ', reminders.length));
-    debug(chalk.bgMagenta('startTime:       ', startTime));
-    debug(chalk.bgMagenta('endTime:         ', endTime));
+  static fillReminders(remindersToFill, startTime, endTime, reminders) {
     const time = Time.getFinal(startTime, reminders);
-
-    debug(chalk.bgMagenta('time:            ', time));
     const diff = Time.diffFromString(time, endTime);
     const averageTime = diff / remindersToFill;
     const averageTimeString = Time.stringFromMiliseconds(averageTime);
+    debug('remindersToFill:  ', remindersToFill);
+    debug('startTime:        ', startTime);
+    debug('endTime:          ', endTime);
+    debug('time:             ', time);
+    debug('diff:             ', diff);
+    debug('averageTime:      ', averageTime);
+    debug('averageTimeString:', averageTimeString);
+    debug('reminders:        ', reminders);
 
-    debug('start:', time, 'end:', endTime, 'diff:', averageTimeString);
     const filled = new Array(remindersToFill).fill(averageTimeString);
     return reminders.concat(filled);
   }

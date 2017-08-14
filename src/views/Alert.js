@@ -1,3 +1,4 @@
+// const debug = require('debug')('Alert');
 const Computer = require('./Computer');
 const Phone = require('./Phone');
 const Terminal = require('./Terminal');

@@ -39,23 +39,17 @@ class DefaultTimerModel {
    */
   merge(timer) {
     const timerConfig = {};
-    debug(chalk.bgCyan('>>>> merge <<<<'));
-    debug(this.timer);
-    debug(chalk.bgCyan('>>>> with <<<<'));
-    debug(timer);
     Object.assign(timerConfig, this.timer, timer);
 
     // Remove alert on computer and phone if debug is enabled
     if (debug.enabled) {
-      debug('debug enabled, set media to terminal only');
+      debug(chalk.bgCyan('debug enabled, set media to terminal only'));
       timerConfig.media = {
         terminal: true,
         computer: false,
         phone: false,
       };
     }
-    debug(chalk.bgCyan('>>>> result <<<<'));
-    debug(timerConfig);
     return timerConfig;
   }
 }
