@@ -1,4 +1,4 @@
-![](https://github.com/russoedu/smoke-and-the-water/blob/master/README/smoke-and-the-water.jpg?raw=true)
+![](https://github.com/russoedu/smoke-and-the-water/blob/master/README/smoke-and-the-water.png?raw=true)
 
 [![dependencies Status](https://david-dm.org/russoedu/smoke-and-the-water/status.svg)](https://david-dm.org/russoedu/smoke-and-the-water)
 [![devDependencies Status](https://david-dm.org/russoedu/smoke-and-the-water/dev-status.svg)](https://david-dm.org/russoedu/smoke-and-the-water?type=dev)
@@ -31,6 +31,7 @@ You should set:
 | **quantity**  | Number | the number of times you want this to be repeated |
 | **reminders** | Array  | list with the repeat timers in "hh:mm:ss" format. If you have less timers than the number you set in `quantity`, the rest of the reminders will be distributed until the `endTime`. The time must use `hh:mm:ss` format. |
 | **media**     | Object | object to define where the alerts should be displayed. **If none is set**, not even in the default `.json`, **only terminal alert will be displayed**. |
+|token          | String | Optional token that can be set for each timer individually |
 
 Example:
 
@@ -52,6 +53,7 @@ Example:
     "computer": true,
     "phone": true
   },
+  "token": "PushMe-App-Token"
 }
 ```
 
@@ -59,6 +61,8 @@ Example:
 To use the mobile push you need to install the app [Push Me](http://pushme.jagcesar.se) and get your key. In the app, click on the key to copy to the clipboard.
 
 Then you need to copy or rename the `.env.example` file to `.env` and insert your key.
+
+You can also set an separeted token for each timer, so each one has it's own name in the app end in the push notification.
 
 
 ## Usage
@@ -72,9 +76,13 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 ## Example
 ### Desktop alert
 ![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/alert.png?raw=true)
+
 ### Mobile push
+
 ![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/mobile.png?raw=true)
+
 ### Terminal message
+
 ![Alert example](https://github.com/russoedu/smoke-and-the-water/blob/master/README/terminal.png?raw=true)
 
 ## TODO
@@ -88,6 +96,7 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 - ~~Make sure `quantity` is smaller than the length of `reminders`.~~
 - ~~Look for performance issues.~~
 - ~~Let user define the first alert instead of setting when the app starts~~
+- ~~Individual push tokens for each timer~~
 
 ### Nice to have
 

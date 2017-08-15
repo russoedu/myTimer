@@ -55,15 +55,13 @@ function setCronTable() {
 class TimerModel {
   constructor(fileName) {
     return new Promise((resolve, reject) => {
-      if (fileName === 'default.json' || path.extname(fileName) !== '.json') {
+      if (path.basename(fileName) === 'default.json' || path.extname(fileName) !== '.json') {
         debug(chalk.bgBlue(fileName, 'rejected'));
-        reject(false);
+        // const error = new Error(false);
+        reject();
       } else {
         debug(chalk.bgBlue(fileName, 'accepted'));
-        const timersFolder = debug.enabled ? './timers-debug' : './timers';
-        const filePath = path.join(timersFolder, fileName);
-
-        fs.readFile(filePath, 'utf8', (err, data) => {
+        fs.readFile(fileName, 'utf8', (err, data) => {
           if (err) {
             reject(err);
           } else {

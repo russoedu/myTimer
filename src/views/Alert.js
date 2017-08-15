@@ -42,7 +42,7 @@ class Alert {
 
     if (phone) {
       const phoneMessage = `${timer.message}\n${Format.ordinal(displayCounter)} ${timer.name}`;
-      Phone.display(phoneMessage);
+      Phone.display(phoneMessage, timer.token);
     }
   }
 }

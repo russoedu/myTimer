@@ -1,8 +1,9 @@
 {
-  "title": "Water time",
-  "message": "🚰  Drink a glass of water!",
+  "title": "🚰",
+  "message": "Drink a glass of water!",
   "name": "glass",
   "bgColor": "bgBlue",
   "endTime": "22:00:00",
-  "quantity": 27
+  "quantity": 27,
+  "token": "PushMe-App-Token"
 }

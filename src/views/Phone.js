@@ -16,12 +16,12 @@ class Phone {
    * @method display
    * @param  {String} message Message of the alert
    */
-  static display(message) {
-    if (!process.env.PUSH_ME_TOKEN) {
+  static display(message, token) {
+    if (!(process.env.PUSH_ME_TOKEN || token)) {
       Status.error(chalk.red('ERROR: PUSH_ME_TOKEN is not defined. Mobile notification can\'t be send.'));
     } else {
       const form = {
-        token: process.env.PUSH_ME_TOKEN,
+        token: token || process.env.PUSH_ME_TOKEN,
         title: message,
       };
       const formData = qs.stringify(form);
