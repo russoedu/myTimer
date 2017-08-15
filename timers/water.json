@@ -4,6 +4,5 @@
   "name": "glass",
   "bgColor": "bgBlue",
   "endTime": "22:00:00",
-  "quantity": 27,
-  "token": "PushMe-App-Token"
+  "quantity": 27
 }

@@ -4,7 +4,6 @@
   "name": "cigarette",
   "bgColor": "bgRed",
   "quantity": 16,
-  "token": "PushMe-App-Token",
   "reminders": [
     "00:00:00",
     "00:30:00"
