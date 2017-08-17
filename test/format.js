@@ -52,4 +52,32 @@ describe('Format', () => {
       assert.equal('60th', sixtieth);
     });
   });
+  describe('fixedLength(str, length)', () => {
+    it('should return a string', () => {
+      const num = 15;
+      const length = 5;
+      const str = Format.fixedLength(num, length);
+
+      assert.isString(str);
+    });
+    it('should return a string with spaces in the begining and then the string', () => {
+      const num = 15;
+      const length = 15;
+      const str = Format.fixedLength(num, length);
+
+      for (let i = 0; i < 13; i += 1) {
+        assert.equal(str[i], ' ');
+      }
+
+      assert.equal(str[13], '1');
+      assert.equal(str[14], '5');
+    });
+    it('should return a string with the correct length', () => {
+      const num = 'hi';
+      const length = 10;
+      const str = Format.fixedLength(num, length);
+
+      assert.lengthOf(str, 10);
+    });
+  });
 });

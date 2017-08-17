@@ -27,7 +27,8 @@ class Format {
   }
 
   static fixedLength(str, length) {
-    return ' '.repeat(length - str.length) + str;
+    const newStr = str.toString();
+    return ' '.repeat(length - newStr.length) + newStr;
   }
 }
 
