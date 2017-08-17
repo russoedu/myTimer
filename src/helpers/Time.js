@@ -162,7 +162,10 @@ class Time {
     debug('averageTimeString:', averageTimeString);
     debug('reminders:        ', reminders);
 
-    const filled = new Array(remindersToFill).fill(averageTimeString);
+    const filled = [];
+    for (let i = 0; i < remindersToFill; i += 1) {
+      filled.push(averageTimeString);
+    }
     return reminders.concat(filled);
   }
 }
