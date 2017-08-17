@@ -4,6 +4,7 @@
 [![devDependencies Status](https://david-dm.org/russoedu/smoke-and-the-water/dev-status.svg)](https://david-dm.org/russoedu/smoke-and-the-water?type=dev)
 [![Coverage Status](https://coveralls.io/repos/github/russoedu/smoke-and-the-water/badge.svg?branch=master)](https://coveralls.io/github/russoedu/smoke-and-the-water?branch=master)
 [![Build Status](https://travis-ci.org/russoedu/smoke-and-the-water.svg?branch=master)](https://travis-ci.org/russoedu/smoke-and-the-water)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/russoedu/smoke-and-the-water/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/russoedu/smoke-and-the-water/?branch=master)
 
 Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water.
 
