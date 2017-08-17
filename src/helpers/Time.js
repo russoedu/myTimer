@@ -42,9 +42,9 @@ class Time {
    */
   static toString(date) {
     debug(date);
-    let hours;
-    let minutes;
-    let seconds;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
     if (typeof date === 'object') {
       hours = date.getHours();
       minutes = date.getMinutes();
@@ -57,6 +57,8 @@ class Time {
       minutes = Math.floor(miliseconds / 1000 / 60);
       miliseconds -= minutes * 1000 * 60;
       seconds = Math.floor(miliseconds / 1000);
+    } else {
+      return new Error('Unknow date format');
     }
 
     return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
