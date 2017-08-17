@@ -1,8 +1,10 @@
+# FILES
 .DS_Store
 .env
-.idea
-node_modules
 package-lock.json
 yarn.lock
 .coveralls.yml
+# FOLDERS
+node_modules
+coverage
 .nyc_output
