@@ -1,4 +1,3 @@
-// /* eslint no-undef: 0 */
 const assert = require('chai').assert;
 const path = require('path');
 const TimerModel = require('../src/models/TimerModel');
@@ -12,7 +11,7 @@ describe('TimerModel', () => {
       new TimerModel(filePath)
         .then((model) => {
           assert.equal(model.fileName, 'smoke');
-          assert.equal(model.title, 'Smoke time');
+          assert.equal(model.title, '🚬');
           assert.isObject(model.media);
           assert.isArray(model.reminders);
           done();

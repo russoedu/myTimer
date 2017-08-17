@@ -31,69 +31,45 @@ class Time {
    * @return {String} The start time formated as hh:mm:ss
    */
   getStart() {
-    const hours = this.startTime.getHours();
-    const minutes = this.startTime.getMinutes();
-    const seconds = this.startTime.getSeconds();
-
-    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
+    return Time.toString(this.startTime);
   }
 
   /**
-   * Convert a time string to miliseconds
-   * @method milisecondsFromString
-   * @param  {String}  time Time in the format hh:mm:ss
-   * @return {Number}  the time in miliseconds
-   */
-  static milisecondsFromString(time) {
-    const parts = time.split(':');
-    if (parts.length === 1) {
-      return (parts[0] * 1000);
-    }
-    if (parts.length === 2) {
-      return ((parts[0] * 1000 * 60) + (parts[1] * 1000));
-    }
-    return ((parts[0] * 1000 * 60 * 60) + (parts[1] * 1000 * 60) + (parts[2] * 1000));
-  }
-
-  /**
-   * Convert a miliseconds number to formated time
-   * @method timeStringFromDate
-   * @param  {Number}              date Miliseconds time number
+   * Convert a date to formated string time
+   * @method toString
+   * @param  {Number|Object}              date Miliseconds time number or Date object
    * @return {String} The time formated as hh:mm:ss
    */
-  static timeStringFromDate(date) {
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
-  }
+  static toString(date) {
+    debug(date);
+    let hours;
+    let minutes;
+    let seconds;
+    if (typeof date === 'object') {
+      hours = date.getHours();
+      minutes = date.getMinutes();
+      seconds = date.getSeconds();
+    } else if (typeof date === 'number') {
+      let miliseconds = date;
 
-  /**
-   * Convert a miliseconds number to formated time
-   * @method stringFromMiliseconds
-   * @param  {Number}              time Miliseconds time number
-   * @return {String} The time formated as hh:mm:ss
-   */
-  static stringFromMiliseconds(time) {
-    let mili = time;
-
-    const hours = Math.floor(mili / 1000 / 60 / 60);
-    mili -= hours * 1000 * 60 * 60;
-    const minutes = Math.floor(mili / 1000 / 60);
-    mili -= minutes * 1000 * 60;
-    const seconds = Math.floor(mili / 1000);
+      hours = Math.floor(miliseconds / 1000 / 60 / 60);
+      miliseconds -= hours * 1000 * 60 * 60;
+      minutes = Math.floor(miliseconds / 1000 / 60);
+      miliseconds -= minutes * 1000 * 60;
+      seconds = Math.floor(miliseconds / 1000);
+    }
 
     return `${addLeadingZero(hours)}:${addLeadingZero(minutes)}:${addLeadingZero(seconds)}`;
   }
 
   /**
-   * Calculates the time difference from two time strings
-   * @method diffFromString
+   * Calculates the interval from two time strings
+   * @method interval
    * @param  {String}       start The start time in the format hh:mm:ss
    * @param  {String}       end   The end time in the format hh:mm:ss
-   * @return {Number}       Miliseconds difference
+   * @return {Number}       Miliseconds interval
    */
-  static diffFromString(start, end) {
+  static interval(start, end) {
     const splitStr = start.split(':');
     const splitEnd = end.split(':');
     const strTime = new Date(0, 0, 0, splitStr[0], splitStr[1], splitStr[2]);
@@ -112,7 +88,7 @@ class Time {
   }
   /**
    * Summ the time from two time strings
-   * @method diffFromString
+   * @method add
    * @param  {String}       start       The start time in the format hh:mm:ss
    * @param  {String}       increment   The time that must be added in the format hh:mm:ss
    * @return {String}       The time after the summ in the format hh:mm:ss
@@ -176,9 +152,9 @@ class Time {
    */
   static fillReminders(remindersToFill, startTime, endTime, reminders) {
     const time = Time.getFinal(startTime, reminders);
-    const diff = Time.diffFromString(time, endTime);
+    const diff = Time.interval(time, endTime);
     const averageTime = diff / remindersToFill;
-    const averageTimeString = Time.stringFromMiliseconds(averageTime);
+    const averageTimeString = Time.toString(averageTime);
     debug('remindersToFill:  ', remindersToFill);
     debug('startTime:        ', startTime);
     debug('endTime:          ', endTime);

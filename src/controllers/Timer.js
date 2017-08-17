@@ -1,8 +1,6 @@
 const Alert = require('../views/Alert');
-const Status = require('../views/Status');
+const Terminal = require('../views/Terminal');
 const Time = require('../helpers/Time');
-const Format = require('../helpers/Format');
-const chalk = require('chalk');
 // const debug = require('debug')('Timer');
 const CronJob = require('cron').CronJob;
 
@@ -38,10 +36,10 @@ class Timer {
    */
   start() {
     const timer = this.timer;
-    Status.log(chalk.bgGreen(`Starting ${timer.fileName} reminders until ${timer.endTime}`));
+    const ordLength = this.timer.reminders.length.toString().length + 2;
+    Terminal.log(` Starting ${timer.fileName} reminders until ${timer.endTime} `, 'bgGreen');
     this.timer.reminders.forEach((reminder, i) => {
-      const ordinal = Format.fixedLength(Format.ordinal(i + 1), 4);
-      Status.log(chalk.green(`${ordinal} ${timer.name} on ${Time.cronToString(reminder)}`));
+      Terminal.log(`$${i + 1}$ ${timer.name} on ${Time.cronToString(reminder)}`, 'green', ordLength);
       const job = new CronJob({
         cronTime: reminder,
         onTick() {

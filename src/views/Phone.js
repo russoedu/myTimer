@@ -3,7 +3,7 @@ const env = require('dotenv').config();
 const request = require('request');
 const chalk = require('chalk');
 const qs = require('qs');
-const Status = require('./Status');
+const Terminal = require('./Terminal');
 
 /**
  * Class for displaying phone alerts
@@ -18,7 +18,7 @@ class Phone {
    */
   static display(message, token) {
     if (!(process.env.PUSH_ME_TOKEN || token)) {
-      Status.error(chalk.red('ERROR: PUSH_ME_TOKEN is not defined. Mobile notification can\'t be send.'));
+      Terminal.error(chalk.red('ERROR: PUSH_ME_TOKEN is not defined. Mobile notification can\'t be send.'));
     } else {
       const form = {
         token: token || process.env.PUSH_ME_TOKEN,
@@ -38,7 +38,7 @@ class Phone {
 
       request(requestObj, (err) => {
         if (err) {
-          Status.error(err);
+          Terminal.error(err);
         }
       });
     }

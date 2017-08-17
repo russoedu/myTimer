@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
 const DefaultTimerModel = require('../models/DefaultTimerModel');
-const Status = require('../views/Status');
+const Terminal = require('../views/Terminal');
 const Time = require('../helpers/Time');
 
 /**
@@ -32,9 +32,7 @@ function setCronTable() {
     }
 
     let init = now;
-    // this.reminders.forEach((reminder) => {
-    //   init = Time.add(init, reminder);
-    // });
+
     const left = quantity - this.reminders.length;
     this.reminders = Time.fillReminders(left, init, this.endTime, this.reminders);
     init = now;
@@ -45,7 +43,7 @@ function setCronTable() {
     // debug(this);
   } else {
     const message = `Error on ${this.fileName} configuration. Please be sure that "quantity" is smaller or equal the length of "reminders".`;
-    Status.error(`ERROR: ${message}`);
+    Terminal.error(`ERROR: ${message}`);
   }
 }
 /**

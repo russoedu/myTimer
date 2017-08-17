@@ -8,3 +8,7 @@ globals:
   describe: true
   it: true
   done: true
+  beforeEach: true
+  before: true
+  afterEach: true
+  after: true

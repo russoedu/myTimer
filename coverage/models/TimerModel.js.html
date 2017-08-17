@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for models/TimerModel.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">models</a> TimerModel.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.74% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>35/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">58.82% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/39</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const debug = require('debug')('TimerModel');
+const fs = require('fs');
+const path = require('path');
+const chalk = require('chalk');
+const DefaultTimerModel = require('../models/DefaultTimerModel');
+const Terminal = require('../views/Terminal');
+const Time = require('../helpers/Time');
+&nbsp;
+/**
+ * Fill the reminder table with the correct times according to the timer
+ * 'reminders' and 'endTime'. The timetable is filled in the Class object on
+ * 'this.timer.reminders'
+ * @private
+ */
+function setCronTable() {
+  const time = new Time();
+  const now = time.getStart();
+&nbsp;
+  // Quantity is set and the quantity of reminders is less than or equal
+  // the quantity (or no reminder was set)
+  const quantity = !this.quantity ? <span class="branch-0 cbranch-no" title="branch not covered" >0 </span>: this.quantity;
+  // TODO fix in case the reminders set are after the endTime
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (quantity &gt; 0 || (<span class="branch-1 cbranch-no" title="branch not covered" >!!this.reminders </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >this.reminders.length &gt; 0)</span>) {
+    // Create an empty reminders array if none was set
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!this.reminders) {
+<span class="cstat-no" title="statement not covered" >      this.reminders = ['00:00:01'];</span>
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.reminders[0] === '00:00:00') {
+      // Delay a second so the reminder can be displayed on after all calcs are made and is not
+      // missed. The computation time makes the alerts start to display after some miliseconds
+      // and the alert is not shown if it is set on the start time
+      this.reminders[0] = '00:00:01';
+    }
+&nbsp;
+    let init = now;
+&nbsp;
+    const left = quantity - this.reminders.length;
+    this.reminders = Time.fillReminders(left, init, this.endTime, this.reminders);
+    init = now;
+    this.reminders.forEach((reminder, i) =&gt; {
+      init = Time.add(init, reminder);
+      this.reminders[i] = Time.stringToCron(init);
+    });
+    // debug(this);
+  } else {
+    const message = <span class="cstat-no" title="statement not covered" >`Error on ${this.fileName} configuration. Please be sure that "quantity" is smaller or equal the length of "reminders".`;</span>
+<span class="cstat-no" title="statement not covered" >    Terminal.error(`ERROR: ${message}`);</span>
+  }
+}
+/**
+ * [exports description]
+ * @type {[type]}
+ */
+class TimerModel {
+  constructor(fileName) {
+    return new Promise((resolve, reject) =&gt; {
+      if (path.basename(fileName) === 'default.json' || path.extname(fileName) !== '.json') {
+        debug(chalk.bgBlue(fileName, 'rejected'));
+        // const error = new Error(false);
+        reject();
+      } else {
+        debug(chalk.bgBlue(fileName, 'accepted'));
+        fs.readFile(fileName, 'utf8', (err, data) =&gt; {
+          <span class="missing-if-branch" title="if path not taken" >I</span>if (err) {
+<span class="cstat-no" title="statement not covered" >            reject(err);</span>
+          } else {
+            // Set the file name
+            this.fileName = path.basename(fileName, '.json');
+&nbsp;
+            // Merge the timer from the JSON with the default timer
+            const defaultTimer = new DefaultTimerModel();
+            const timer = defaultTimer.merge(JSON.parse(data));
+&nbsp;
+            // Set this object with the merged timer
+            Object.assign(this, timer, this);
+&nbsp;
+            // Create the reminder table
+            setCronTable.bind(this)();
+            resolve(this);
+          }
+        });
+      }
+    });
+  }
+}
+&nbsp;
+module.exports = TimerModel;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Aug 17 2017 12:20:36 GMT-0300 (-03)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

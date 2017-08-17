@@ -1,11 +1,12 @@
 {
   "name": "smoke-and-the-water",
-  "version": "1.8.2",
+  "version": "2.0.0",
   "description": "Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water. Sure you can use it to remember daily stuff… but it was created for my own health needs 😬.",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "test": "mocha"
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -34,12 +35,13 @@
     "elapsy": "^1.1.0",
     "node-notifier": "^5.1.2",
     "qs": "^6.5.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "debug": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "chai": "^4.1.1",
-    "debug": "^3.0.0",
+    "coveralls": "^2.13.1",
     "esdoc": "^1.0.1",
     "esdoc-node": "^1.0.2",
     "esdoc-node-plugin": "^0.2.1",
@@ -48,6 +50,8 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "sinon": "^3.2.0"
   }
 }

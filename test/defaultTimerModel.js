@@ -1,4 +1,3 @@
-// /* eslint no-undef: 0 */
 const assert = require('chai').assert;
 const path = require('path');
 const DefaultTimerModel = require('../src/models/DefaultTimerModel');
@@ -18,8 +17,8 @@ describe('DefaultTimerModel', () => {
       const filePath = path.join(folder, 'smoke.json');
       new TimerModel(filePath)
         .then((model) => {
-          assert.notEqual(model.title, 'Remember');
-          assert.notEqual(model.message, '🍰 The cake is a lie');
+          assert.notEqual(model.title, '🍰');
+          assert.notEqual(model.message, 'The cake is a lie');
           done();
         })
         .catch((err) => {

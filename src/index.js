@@ -1,6 +1,6 @@
 const debug = require('debug')('index');
 const fs = require('fs');
-const Status = require('./views/Status');
+const Terminal = require('./views/Terminal');
 const Timer = require('./controllers/Timer');
 const TimerModel = require('./models/TimerModel');
 const path = require('path');
@@ -26,7 +26,7 @@ fs.readdirSync(folder)
       .catch((err) => {
         if (err) {
           debug(err);
-          Status.error(err);
+          Terminal.error(err);
         }
       });
   });

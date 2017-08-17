@@ -2,7 +2,6 @@
 const Computer = require('./Computer');
 const Phone = require('./Phone');
 const Terminal = require('./Terminal');
-const Format = require('../helpers/Format');
 const Time = require('../helpers/Time');
 
 /**
@@ -23,25 +22,25 @@ class Alert {
     let phone = false;
 
     if (timer.media) {
-      terminal = timer.media.terminal || true;
-      computer = timer.media.computer || false;
-      phone = timer.media.phone || false;
+      terminal = timer.media.terminal === undefined ? true : timer.media.terminal;
+      computer = timer.media.computer === undefined ? false : timer.media.computer;
+      phone = timer.media.phone === undefined ? false : timer.media.phone;
     }
 
     // Terminal is default
     if (terminal) {
-      const time = Time.timeStringFromDate(new Date());
-      const statusMessage = `${time} >>> ${timer.message} >>> ${Format.ordinal(displayCounter)} ${timer.name}`;
-      Terminal.display(timer.bgColor, statusMessage);
+      const time = Time.toString(new Date());
+      const statusMessage = ` ${time} >>> ${timer.message} >>> $${displayCounter}$ ${timer.name} `;
+      Terminal.log(statusMessage, timer.bgColor);
     }
 
     if (computer) {
-      const computerMessage = `${timer.message}\n${Format.ordinal(displayCounter)} ${timer.name}`;
+      const computerMessage = `${timer.message}\n$${displayCounter}$ ${timer.name}`;
       Computer.display(timer.title, computerMessage);
     }
 
     if (phone) {
-      const phoneMessage = `${timer.message}\n${Format.ordinal(displayCounter)} ${timer.name}`;
+      const phoneMessage = `${timer.message}\n$${displayCounter}$ ${timer.name}`;
       Phone.display(phoneMessage, timer.token);
     }
   }
