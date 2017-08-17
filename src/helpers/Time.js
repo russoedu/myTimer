@@ -127,7 +127,6 @@ class Time {
    * @method getFinal
    * @param  {String} startTime      The start time formated in as hh:mm:ss
    * @param  {Array} incrementArray  The timeTable array with all reminders
-   * @param  {Boolean} log           If the log with the alerts should be displayed
    * @return {String} The fnal time formated as hh:mm:ss
    */
   static getFinal(startTime, incrementArray) {
@@ -147,7 +146,6 @@ class Time {
    * @param  {String}   startTime      The start time formated in as hh:mm:ss
    * @param  {String}   endTime   The end time in the format hh:mm:ss
    * @param  {Array}    reminders The reminders array
-   * @param  {Boolean} log           If the log with the alerts should be displayed
    * @return {Array} The full filled time table (reminders) array
    */
   static fillReminders(remindersToFill, startTime, endTime, reminders) {

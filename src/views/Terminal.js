@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const Format = require('../helpers/Format');
 const chalk = require('chalk');
 
@@ -22,7 +21,7 @@ class Terminal {
       const ordinal = Format.fixedLength(Format.ordinal(match[1]), leng);
       replaced = str.replace(ordinalRegEx, ordinal);
     }
-    console.log(chalk[color](replaced));
+    process.stdout.write(`${chalk[color](replaced)}\n`);
   }
 
   /**
@@ -31,7 +30,7 @@ class Terminal {
    * @param  {Mixed} obj Any type of variable
    */
   static error(obj) {
-    console.error(obj);
+    process.stdout.write(`${obj}\n`);
   }
 }
 
