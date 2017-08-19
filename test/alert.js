@@ -1,13 +1,12 @@
-/* eslint-disable no-console */
-const assert = require('chai').assert;
+const expect = require('chai').expect;
 const Time = require('../src/helpers/Time');
 const Alert = require('../src/views/Alert');
 const Terminal = require('../src/views/Terminal');
 const Computer = require('../src/views/Computer');
 const Phone = require('../src/views/Phone');
 
-let terminalLog;
 let response = {};
+let terminalDisplay;
 let computerDisplay;
 let phoneDisplay;
 
@@ -36,12 +35,12 @@ describe('Alert', () => {
 
   before(() => {
     // Save the views functions
-    terminalLog = Terminal.log;
+    terminalDisplay = Terminal.display;
     computerDisplay = Computer.display;
     phoneDisplay = Phone.display;
 
     // Replace the views functions for tests
-    Terminal.log = (msg, color) => {
+    Terminal.display = (msg, color) => {
       response.terminal = {
         msg,
         color,
@@ -62,7 +61,7 @@ describe('Alert', () => {
   });
   after(() => {
     // Return the view functions to it's original versions
-    Terminal.log = terminalLog;
+    Terminal.display = terminalDisplay;
     Computer.display = computerDisplay;
     Phone.display = phoneDisplay;
   });
@@ -73,9 +72,9 @@ describe('Alert', () => {
 
       Alert.display(timer, 1);
 
-      assert.isObject(response.terminal);
-      assert.isUndefined(response.computer);
-      assert.isUndefined(response.phone);
+      expect(response.terminal).to.be.an('object');
+      expect(response.computer).to.be.undefined;
+      expect(response.phone).to.be.undefined;
     });
 
     it('should alert on computer only', () => {
@@ -83,9 +82,9 @@ describe('Alert', () => {
 
       Alert.display(timer, 1);
 
-      assert.isObject(response.computer);
-      assert.isUndefined(response.terminal);
-      assert.isUndefined(response.phone);
+      expect(response.computer).to.be.an('object');
+      expect(response.terminal).to.be.undefined;
+      expect(response.phone).to.be.undefined;
     });
 
     it('should alert on phone only', () => {
@@ -93,9 +92,9 @@ describe('Alert', () => {
 
       Alert.display(timer, 1);
 
-      assert.isObject(response.phone);
-      assert.isUndefined(response.computer);
-      assert.isUndefined(response.terminal);
+      expect(response.phone).to.be.an('object');
+      expect(response.computer).to.be.undefined;
+      expect(response.terminal).to.be.undefined;
     });
 
     it('should format terminal log', () => {
@@ -103,24 +102,24 @@ describe('Alert', () => {
 
       Alert.display(timer, '--X--');
       const time = Time.toString(new Date());
-      assert.equal(response.terminal.msg, ` ${time} >>> message >>> $--X--$ name `);
-      assert.equal(response.terminal.color, 'color');
+      expect(response.terminal.msg).to.equal(` ${time} >>> message >>> $--X--$ name `);
+      expect(response.terminal.color).to.equal('color');
     });
 
     it('should format computer log', () => {
       timer.media.computer = true;
 
       Alert.display(timer, '--X--');
-      assert.equal(response.computer.title, 'title');
-      assert.equal(response.computer.message, 'message\n$--X--$ name');
+      expect(response.computer.title).to.equal('title');
+      expect(response.computer.message).to.equal('message\n$--X--$ name');
     });
 
     it('should format phone log', () => {
       timer.media.phone = true;
 
       Alert.display(timer, '--X--');
-      assert.equal(response.phone.message, 'message\n$--X--$ name');
-      assert.equal(response.phone.token, 'token');
+      expect(response.phone.message).to.equal('message\n$--X--$ name');
+      expect(response.phone.token).to.equal('token');
     });
 
     it('should use terminal as default log', () => {
@@ -128,9 +127,9 @@ describe('Alert', () => {
 
       Alert.display(timer, '--X--');
 
-      assert.isObject(response.terminal);
-      assert.isUndefined(response.computer);
-      assert.isUndefined(response.phone);
+      expect(response.terminal).to.be.an('object');
+      expect(response.computer).to.be.undefined;
+      expect(response.phone).to.be.undefined;
     });
   });
 });

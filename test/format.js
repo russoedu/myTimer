@@ -1,4 +1,4 @@
-const assert = require('chai').assert;
+const expect = require('chai').expect;
 const Format = require('../src/helpers/Format');
 
 describe('Format', () => {
@@ -8,37 +8,37 @@ describe('Format', () => {
       const tenth = Format.ordinal(10);
       const twentieth = Format.ordinal(20);
       const oneMillionth = Format.ordinal(100000);
-      assert.equal('0th', zeroth);
-      assert.equal('10th', tenth);
-      assert.equal('20th', twentieth);
-      assert.equal('100000th', oneMillionth);
+      expect('0th').to.equal(zeroth);
+      expect('10th').to.equal(tenth);
+      expect('20th').to.equal(twentieth);
+      expect('100000th').to.equal(oneMillionth);
     });
     it('should create ordinal value for numbers finished in 1', () => {
       const first = Format.ordinal(1);
       const eleventh = Format.ordinal(11);
       const twentyFirst = Format.ordinal(21);
-      assert.equal('1st', first);
-      assert.notEqual('11st', eleventh);
-      assert.equal('11th', eleventh);
-      assert.equal('21st', twentyFirst);
+      expect('1st').to.equal(first);
+      expect('11st').to.not.equal(eleventh);
+      expect('11th').to.equal(eleventh);
+      expect('21st').to.equal(twentyFirst);
     });
     it('should create ordinal value for numbers finished in 2', () => {
       const second = Format.ordinal(2);
       const twelfth = Format.ordinal(12);
       const twentySecond = Format.ordinal(22);
-      assert.equal('2nd', second);
-      assert.notEqual('12nd', twelfth);
-      assert.equal('12th', twelfth);
-      assert.equal('22nd', twentySecond);
+      expect('2nd').to.equal(second);
+      expect('12nd').to.not.equal(twelfth);
+      expect('12th').to.equal(twelfth);
+      expect('22nd').to.equal(twentySecond);
     });
     it('should create ordinal value for numbers finished in 3', () => {
       const third = Format.ordinal(3);
       const thirteenth = Format.ordinal(13);
       const twentyThird = Format.ordinal(23);
-      assert.equal('3rd', third);
-      assert.notEqual('13rd', thirteenth);
-      assert.equal('13th', thirteenth);
-      assert.equal('23rd', twentyThird);
+      expect('3rd').to.equal(third);
+      expect('13rd').to.not.equal(thirteenth);
+      expect('13th').to.equal(thirteenth);
+      expect('23rd').to.equal(twentyThird);
     });
     it('should create ordinal value for numbers finished in 4+', () => {
       const fourth = Format.ordinal(4);
@@ -46,10 +46,10 @@ describe('Format', () => {
       const twentyEighth = Format.ordinal(28);
       const sixtieth = Format.ordinal(60);
 
-      assert.equal('4th', fourth);
-      assert.equal('16th', sixteenth);
-      assert.equal('28th', twentyEighth);
-      assert.equal('60th', sixtieth);
+      expect('4th').to.equal(fourth);
+      expect('16th').to.equal(sixteenth);
+      expect('28th').to.equal(twentyEighth);
+      expect('60th').to.equal(sixtieth);
     });
   });
   describe('fixedLength(str, length)', () => {
@@ -58,7 +58,7 @@ describe('Format', () => {
       const length = 5;
       const str = Format.fixedLength(num, length);
 
-      assert.isString(str);
+      expect(str).to.be.a('string');
     });
     it('should return a string with spaces in the begining and then the string', () => {
       const num = 15;
@@ -66,18 +66,18 @@ describe('Format', () => {
       const str = Format.fixedLength(num, length);
 
       for (let i = 0; i < 13; i += 1) {
-        assert.equal(str[i], ' ');
+        expect(str[i]).to.equal(' ');
       }
 
-      assert.equal(str[13], '1');
-      assert.equal(str[14], '5');
+      expect(str[13]).to.equal('1');
+      expect(str[14]).to.equal('5');
     });
     it('should return a string with the correct length', () => {
       const num = 'hi';
       const length = 10;
       const str = Format.fixedLength(num, length);
 
-      assert.lengthOf(str, 10);
+      expect(str).to.have.lengthOf(10);
     });
   });
 });

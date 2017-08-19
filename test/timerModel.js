@@ -1,7 +1,6 @@
-const assert = require('chai').assert;
+const expect = require('chai').expect;
 const path = require('path');
 const TimerModel = require('../src/models/TimerModel');
-
 
 describe('TimerModel', () => {
   describe('constructor()', () => {
@@ -10,10 +9,10 @@ describe('TimerModel', () => {
       const filePath = path.join(folder, 'smoke.json');
       new TimerModel(filePath)
         .then((model) => {
-          assert.equal(model.fileName, 'smoke');
-          assert.equal(model.title, '🚬');
-          assert.isObject(model.media);
-          assert.isArray(model.reminders);
+          expect(model.fileName).to.equal('smoke');
+          expect(model.title).to.equal('🚬');
+          expect(model.media).to.be.an('object');
+          expect(model.reminders).to.be.an('array');
           done();
         })
         .catch((err) => {
@@ -28,7 +27,7 @@ describe('TimerModel', () => {
           done(new Error('Model should not be created'));
         })
         .catch((err) => {
-          assert.isUndefined(err, 'Undefined error');
+          expect(err).to.be.undefined;
           done();
         });
     });
@@ -40,7 +39,7 @@ describe('TimerModel', () => {
           done(new Error('Model should not be created'));
         })
         .catch((err) => {
-          assert.isUndefined(err, 'Undefined error');
+          expect(err).to.be.undefined;
           done();
         });
     });

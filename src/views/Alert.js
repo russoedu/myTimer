@@ -17,29 +17,29 @@ class Alert {
    * @param  {Number} displayCounter The display counter used on the alerts
    */
   static display(timer, displayCounter) {
-    let terminal = true;
-    let computer = false;
-    let phone = false;
+    let media = timer.media;
 
-    if (timer.media) {
-      terminal = timer.media.terminal === undefined ? true : timer.media.terminal;
-      computer = timer.media.computer === undefined ? false : timer.media.computer;
-      phone = timer.media.phone === undefined ? false : timer.media.phone;
+    if (media === undefined) {
+      media = {
+        terminal: true,
+        computer: false,
+        phone: false,
+      };
     }
 
     // Terminal is default
-    if (terminal) {
+    if (media.terminal) {
       const time = Time.toString(new Date());
       const statusMessage = ` ${time} >>> ${timer.message} >>> $${displayCounter}$ ${timer.name} `;
-      Terminal.log(statusMessage, timer.bgColor);
+      Terminal.display(statusMessage, timer.bgColor);
     }
 
-    if (computer) {
+    if (media.computer) {
       const computerMessage = `${timer.message}\n$${displayCounter}$ ${timer.name}`;
       Computer.display(timer.title, computerMessage);
     }
 
-    if (phone) {
+    if (media.phone) {
       const phoneMessage = `${timer.message}\n$${displayCounter}$ ${timer.name}`;
       Phone.display(phoneMessage, timer.token);
     }

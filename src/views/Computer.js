@@ -1,4 +1,5 @@
 const notifier = require('node-notifier');
+const Format = require('../helpers/Format');
 
 /**
  * Class for displaying computer alerts
@@ -16,8 +17,8 @@ class Computer {
     const notifierMessage = {
       group: title,
       sound: true,
+      message: Format.ordinalReplace(message),
       title,
-      message,
     };
     notifier.notify(notifierMessage);
   }

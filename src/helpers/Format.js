@@ -26,6 +26,24 @@ class Format {
     return `${num}th`;
   }
 
+  /**
+   * Display on terminal
+   * @param  {String} str    String that will be used to replace ordinals. Use the pattern $number$
+   *                         to replace it for it's ordinal
+   * @param  {Number} length The length that will be used for the ordinal number
+   */
+  static ordinalReplace(str, length) {
+    let replaced = str;
+    const ordinalRegEx = /\$([0-9]+)\$/img;
+    const match = ordinalRegEx.exec(str);
+    if (match) {
+      const leng = length || Format.ordinal(match[1]).length;
+      const ordinal = Format.fixedLength(Format.ordinal(match[1]), leng);
+      replaced = str.replace(ordinalRegEx, ordinal);
+    }
+    return replaced;
+  }
+
   static fixedLength(str, length) {
     const newStr = str.toString();
     return ' '.repeat(length - newStr.length) + newStr;

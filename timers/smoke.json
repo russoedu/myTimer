@@ -3,7 +3,7 @@
   "message": "You can smoke now.",
   "name": "cigarette",
   "bgColor": "bgRed",
-  "quantity": 16,
+  "quantity": 18,
   "reminders": [
     "00:00:00",
     "00:30:00"

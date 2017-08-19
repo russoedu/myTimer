@@ -37,9 +37,9 @@ class Timer {
   start() {
     const timer = this.timer;
     const ordLength = this.timer.reminders.length.toString().length + 2;
-    Terminal.log(` Starting ${timer.fileName} reminders until ${timer.endTime} `, 'bgGreen');
+    Terminal.display(` Starting ${timer.fileName} reminders until ${timer.endTime} `, 'bgGreen');
     this.timer.reminders.forEach((reminder, i) => {
-      Terminal.log(`$${i + 1}$ ${timer.name} on ${Time.cronToString(reminder)}`, 'green', ordLength);
+      Terminal.display(`$${i + 1}$ ${timer.name} on ${Time.cronToString(reminder)}`, 'green', ordLength);
       const job = new CronJob({
         cronTime: reminder,
         onTick() {

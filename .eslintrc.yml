@@ -1,14 +1,13 @@
 extends: airbnb/base
 plugins: [
-  import
+  import,
+  chai-friendly,
 ]
 rules:
   import/no-extraneous-dependencies: [error, { devDependencies: true }]
-globals:
-  describe: true
-  it: true
-  done: true
-  beforeEach: true
-  before: true
-  afterEach: true
-  after: true
+  no-unused-expressions: 0
+  chai-friendly/no-unused-expressions: 2
+env:
+  es6: true
+  node: true
+  mocha: true
