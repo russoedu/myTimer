@@ -1,9 +1,6 @@
-/* eslint no-unused-vars: 0 */
 const env = require('dotenv').config();
 const request = require('request');
-const chalk = require('chalk');
 const qs = require('qs');
-const Terminal = require('./Terminal');
 const Format = require('../helpers/Format');
 
 /**
