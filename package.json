@@ -1,6 +1,6 @@
 {
   "name": "smoke-and-the-water",
-  "version": "2.0.1",
+  "version": "2.5.0",
   "description": "Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water. Sure you can use it to remember daily stuff… but it was created for my own health needs 😬.",
   "main": "index.js",
   "scripts": {
@@ -35,8 +35,7 @@
     "elapsy": "^1.1.0",
     "node-notifier": "^5.1.2",
     "qs": "^6.5.0",
-    "request": "^2.81.0",
-    "debug": "^3.0.0"
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",

@@ -1,7 +1,5 @@
-const debug = require('debug')('TimerModel');
 const fs = require('fs');
 const path = require('path');
-const chalk = require('chalk');
 const DefaultTimerModel = require('../models/DefaultTimerModel');
 const Terminal = require('../views/Terminal');
 const Time = require('../helpers/Time');
@@ -40,7 +38,6 @@ function setCronTable() {
       init = Time.add(init, reminder);
       this.reminders[i] = Time.stringToCron(init);
     });
-    // debug(this);
   } else {
     const message = `Error on ${this.fileName} configuration. Please be sure that "quantity" is smaller or equal the length of "reminders".`;
     Terminal.error(`ERROR: ${message}`);
@@ -54,11 +51,9 @@ class TimerModel {
   constructor(fileName) {
     return new Promise((resolve, reject) => {
       if (path.basename(fileName) === 'default.json' || path.extname(fileName) !== '.json') {
-        debug(chalk.bgBlue(fileName, 'rejected'));
         // const error = new Error(false);
         reject();
       } else {
-        debug(chalk.bgBlue(fileName, 'accepted'));
         fs.readFile(fileName, 'utf8', (err, data) => {
           if (err) {
             reject(err);

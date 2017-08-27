@@ -1,12 +1,8 @@
 {
-  "title": "🚰 DEBUG",
+  "title": "EMPTY DEBUG",
   "message": "Drink a glass of water!",
   "name": "glass",
   "bgColor": "bgBlue",
   "endTime": "22:00:00",
-  "quantity": 0,
-  "reminders": [
-    "00:00:00",
-    "00:30:00"
-  ]
+  "quantity": 3
 }

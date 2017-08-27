@@ -1,7 +1,6 @@
 const Alert = require('../views/Alert');
 const Terminal = require('../views/Terminal');
 const Time = require('../helpers/Time');
-// const debug = require('debug')('Timer');
 const CronJob = require('cron').CronJob;
 
 /**

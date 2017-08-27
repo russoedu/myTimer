@@ -1,4 +1,4 @@
-const debug = require('debug')('Time');
+
 
 let instance = null;
 
@@ -41,7 +41,6 @@ class Time {
    * @return {String} The time formated as hh:mm:ss
    */
   static toString(date) {
-    debug(date);
     let hours = 0;
     let minutes = 0;
     let seconds = 0;
@@ -155,14 +154,6 @@ class Time {
     const diff = Time.interval(time, endTime);
     const averageTime = diff / remindersToFill;
     const averageTimeString = Time.toString(averageTime);
-    debug('remindersToFill:  ', remindersToFill);
-    debug('startTime:        ', startTime);
-    debug('endTime:          ', endTime);
-    debug('time:             ', time);
-    debug('diff:             ', diff);
-    debug('averageTime:      ', averageTime);
-    debug('averageTimeString:', averageTimeString);
-    debug('reminders:        ', reminders);
 
     const filled = [];
     for (let i = 0; i < remindersToFill; i += 1) {

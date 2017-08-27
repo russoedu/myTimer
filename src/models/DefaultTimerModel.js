@@ -1,8 +1,5 @@
 const fs = require('fs');
-const chalk = require('chalk');
 const path = require('path');
-const debug = require('debug')('DefaultTimerModel');
-const Time = require('../helpers/Time');
 
 let instance = null;
 
@@ -22,7 +19,7 @@ class DefaultTimerModel {
     if (!instance) {
       instance = this;
     }
-    const timersFolder = debug.enabled ? './test/timers' : './timers';
+    const timersFolder = './timers';
     const defaultPath = path.join(timersFolder, 'default.json');
     const defaultTimer = JSON.parse(fs.readFileSync(defaultPath), 'utf8');
     this.startTime = new Date();
@@ -42,17 +39,6 @@ class DefaultTimerModel {
     const timerConfig = {};
     Object.assign(timerConfig, this.timer, timer);
 
-    // Remove alert on computer and phone if debug is enabled
-    if (debug.enabled) {
-      timerConfig.media = {
-        terminal: true,
-        computer: false,
-        phone: false,
-      };
-      const time = new Time();
-      timerConfig.endTime = Time.add(time.getStart(), '00:10:00');
-      debug(chalk.bgCyan('debug enabled, endTime =', timerConfig.endTime));
-    }
     return timerConfig;
   }
 }

@@ -1,11 +1,11 @@
 {
-  "title": "Smoke time",
-  "message": "🚬  You can smoke now.",
+  "title": "🚬 DEBUG",
+  "message": "You can smoke now.",
   "name": "cigarette",
   "bgColor": "bgRed",
-  "quantity": 8,
+  "quantity": 18,
   "reminders": [
-    "00:00:10",
-    "00:01:00"
+    "00:00:00",
+    "00:30:00"
   ]
 }
