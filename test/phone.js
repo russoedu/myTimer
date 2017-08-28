@@ -1,4 +1,3 @@
-/* eslint no-unused-vars: 0 */
 const Phone = require('../src/views/Phone');
 const sinon = require('sinon');
 const expect = require('chai').expect;

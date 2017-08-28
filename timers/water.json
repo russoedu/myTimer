@@ -4,5 +4,8 @@
   "name": "glass",
   "bgColor": "bgBlue",
   "endTime": "22:00:00",
-  "quantity": 27
+  "quantity": 27,
+  "reminders": [
+    "00:15:00"
+  ]
 }

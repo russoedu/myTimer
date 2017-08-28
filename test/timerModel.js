@@ -11,6 +11,9 @@ const folder = './test/timers';
 describe('TimerModel', () => {
   beforeEach(() => {
     clock = sinon.useFakeTimers();
+    // Reset the start time for all tests to 1970-01-01T00:00:00.000Z
+    const time = new Time();
+    time.startTime = new Date();
   });
   afterEach(() => {
     clock.restore();

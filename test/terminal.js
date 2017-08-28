@@ -8,10 +8,10 @@ const color = 'bgRed';
 const length = 5;
 
 let write;
-// let chlk;
 
 describe('Terminal', () => {
   before(() => {
+    process.stdout.write('    It will not show results because "process.stdout.write" has been stubed\n');
     write = sinon.stub(process.stdout, 'write');
   });
 

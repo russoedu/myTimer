@@ -34,6 +34,10 @@ describe('Alert', () => {
   });
 
   before(() => {
+    // Reset the start time for all tests to 1970-01-01T00:00:00.000Z
+    const time = new Time();
+    time.startTime = new Date();
+
     // Save the views functions
     terminalDisplay = Terminal.display;
     computerDisplay = Computer.display;

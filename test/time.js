@@ -20,28 +20,25 @@ function createMilisecondsNumber(h, m, s) {
 describe('Time', () => {
   beforeEach(() => {
     clock = sinon.useFakeTimers();
+    // Reset the start time for all tests to 1970-01-01T00:00:00.000Z
+    const time = new Time();
+    time.startTime = new Date();
   });
   afterEach(() => {
     clock.restore();
   });
-
   describe('constructor()', () => {
     it('should return object', () => {
-      const time1 = new Time();
-      clock.tick((2 * hours) + (43 * minutes) + (32 * seconds));
-      const time2 = new Time();
+      const time = new Time();
 
-      expect(time1).to.be.an('object');
-      expect(time2).to.be.an('object');
+      expect(time).to.be.an('object');
     });
     it('should return singleton object with the same startTime', () => {
-      const time1 = new Time();
-      // Set the startTime to 1970-01-01T00:00:00.000Z to avoid the real clock
-      time1.startTime = new Date();
       const date1 = new Date();
+      const time1 = new Time();
       clock.tick((2 * hours) + (43 * minutes) + (32 * seconds));
-      const time2 = new Time();
       const date2 = new Date();
+      const time2 = new Time();
 
       expect(time1.getStart()).to.equal(time2.getStart());
       expect(Time.toString(date1)).to.not.equal(Time.toString(date2));
@@ -54,9 +51,9 @@ describe('Time', () => {
 
       expect(time1.getStart()).to.be.a('string');
     });
-    it('should return correct time', () => {
+    it('should return correct time string', () => {
+      clock.tick(0);
       const time = new Time();
-      // Create a reseted date to check if the conversion works
       const now = new Date();
       const h = now.getHours();
       const m = now.getMinutes();
@@ -80,11 +77,11 @@ describe('Time', () => {
       expect(Time.toString(miliseconds)).to.match(timeRegExp);
     });
     it('should return error if attribute is not Date or number', () => {
-      const shouldBeError = 'test';
-      expect(Time.toString(shouldBeError)).to.be.an('error');
+      const shouldBeError = Time.toString('test');
+      expect(shouldBeError).to.be.an('error');
+      expect(shouldBeError.message).to.equal('Unknow date format');
     });
     it('should convert Date object to time formated string', () => {
-      clock.tick(2 * 60 * 60 * 1000);
       const date = new Date();
       expect(Time.toString(date)).to.match(timeRegExp);
     });
@@ -92,22 +89,19 @@ describe('Time', () => {
       const time = 9200000;
       expect(Time.toString(time)).to.match(timeRegExp);
     });
-    // TODO Fix it using a defined timezone, so the test can be always the same
     it('should convert Date object to the correct time formated string', () => {
-      // This is needed to assert it won't relay on the user's time zone
-      clock.tick(365 * 10 * 3 * 60 * 60 * 1000);
-      function createDateAsUTC(date) {
-        // This is needed to assert it won't relay on the user's time zone
-        return new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(),
-          date.getHours(), date.getMinutes(), date.getSeconds()));
-      }
+      const date1 = new Date();
+      const h1 = date1.getHours();
+      const m1 = date1.getMinutes();
+      const s1 = date1.getSeconds();
+      clock.tick((4 * hours) + (21 * minutes) + (36 * seconds));
+      const date2 = new Date();
+      const h2 = date2.getHours();
+      const m2 = date2.getMinutes();
+      const s2 = date2.getSeconds();
 
-      const date1 = createDateAsUTC(new Date());
-      clock.tick(4 * 60 * 60 * 1000);
-      const date2 = createDateAsUTC(new Date());
-
-      expect(Time.toString(date1)).to.equal('00:00:00');
-      expect(Time.toString(date2)).to.equal('04:00:00');
+      expect(Time.toString(date1)).to.equal(`${addLeadingZero(h1)}:${addLeadingZero(m1)}:${addLeadingZero(s1)}`);
+      expect(Time.toString(date2)).to.equal(`${addLeadingZero(h2)}:${addLeadingZero(m2)}:${addLeadingZero(s2)}`);
     });
     it('should convert miliseconds to the correct time formated string', () => {
       const time1 = createMilisecondsNumber(0, 0, 0);
