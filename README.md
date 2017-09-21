@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/russoedu/smoke-and-the-water/badge.svg?branch=master)](https://coveralls.io/github/russoedu/smoke-and-the-water?branch=master)
 [![Build Status](https://travis-ci.org/russoedu/smoke-and-the-water.svg?branch=master)](https://travis-ci.org/russoedu/smoke-and-the-water)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/russoedu/smoke-and-the-water/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/russoedu/smoke-and-the-water/?branch=master)
+[![Ebert](https://ebertapp.io/github/russoedu/smoke-and-the-water.svg)](https://ebertapp.io/github/russoedu/smoke-and-the-water)
 
 Smoke and the Water is a simple recurrent timer to help you to control how many cigarettes you 🚬 smoke, how many ☕️ coffee you drink and help you to remember you to drink pure clean 🚰 water.
 
@@ -91,25 +92,26 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 ## TODO
 
 ### Mandatory
-- Create tests.
-- Check if all needed config are filled or have default values.
-- ~~Replace setTimeout for cron~~
-- ~~Calculate the remaining alerts.~~
-- ~~Finish execution after all timers finish.~~
-- ~~Make sure `quantity` is smaller than the length of `reminders`.~~
-- ~~Look for performance issues.~~
-- ~~Let user define the first alert instead of setting when the app starts~~
-- ~~Individual push tokens for each timer~~
+- [ ] Fix issue with timers finishing in the next day.
+- [ ] Check if all needed config are filled or have default values.
+- [x] Create tests.
+- [x] Replace setTimeout for cron.
+- [x] Calculate the remaining alerts.
+- [x] Finish execution after all timers finish.
+- [x] Make sure `quantity` is smaller than the length of `reminders`.
+- [x] Look for performance issues.
+- [x] Let user define the first alert instead of setting when the app starts
+- [x] Individual push tokens for each timer
 
 ### Nice to have
 
-- Create better CLI interface
-- Create config wizard
-- Set individual messages for each timer (change `reminders` from an array to an object)
-	- New `reminders` options to make it easier to crate your time table:
-	 - "fromBegining": "Time from the beginning"
-	 - "after": "Time after the previous, so, it's position matter"
-	 - "at": "On an exact time of the day (24:00)"
+- [ ] Create better CLI interface
+- [ ] Create config wizard
+- [ ] Set individual messages for each timer (change `reminders` from an array to an object)
+	- [ ] New `reminders` options to make it easier to crate your time table:
+	 - [ ] "fromBegining": "Time from the beginning"
+	 - [ ] "after": "Time after the previous, so, it's position matter"
+	 - [ ] "at": "On an exact time of the day (24:00)"
 
 ```
 "reminders": [
@@ -124,7 +126,7 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
   ]
 ```
 
-- Possibility to disable alert on some days:
+- [ ] Possibility to disable alert on some days:
 
 ```
 "enable": [
@@ -144,5 +146,5 @@ Finaly, run `npm start` and the app will run, alerting you in the computer and o
 
 ### Maybe in the future…
 
-- Create Electron app
-- Create Ionic app
+- [ ] Create Electron app
+- [ ] Create Ionic app

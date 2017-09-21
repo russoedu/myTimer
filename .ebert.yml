@@ -17,8 +17,8 @@ engines:
   remark-lint:
     enabled: true
 exclude_paths:
-- test
 - README
 - coverage
 - docs
 - node_modules
+- *.MD
